@@ -12,16 +12,6 @@ const config = {
   mode: mode,
   entry: {
     index: path.resolve(__dirname, './src/index.js'),
-    player: path.resolve(__dirname, './src/components/Player/player.js'),
-    PeaksGenerator: path.resolve(__dirname, './src/PeaksGenerator.js'),
-    InputForm: path.resolve(
-      __dirname,
-      './src/components/InputForm/InputForm.js'
-    ),
-    StateContainer: path.resolve(
-      __dirname,
-      './src/components/StateContainer/StateContainer.js'
-    ),
   },
   output: {
     path: path.resolve(__dirname, './dist'),
