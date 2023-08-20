@@ -1,23 +1,36 @@
 import React from 'react'
 import './main.css'
+import { Helmet } from 'react-helmet'
 
 function Main() {
   return (
     <div className="body">
       <div className="form-wrapper">
-        <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
-        <form name="payform-tinkoff" onsubmit="pay(this); return false;">
+        <Helmet>
+          <script
+            src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"
+            type="text/javascript"
+          ></script>
+        </Helmet>
+        <form
+          name="payform-tinkoff"
+          onSubmit={(e) => {
+            e.preventDefault()
+            pay(this)
+            return false
+          }}
+        >
           <input
             className="payform-tinkoff-row"
             type="hidden"
-            name="1692359317567DEMO"
-            value="rzn29q4h01tm0bkp"
+            name="terminalkey"
+            value="1692359317567DEMO"
           />
           <input
             className="payform-tinkoff-row"
             type="hidden"
             name="frame"
-            value="true"
+            value="false"
           />
           <input
             className="payform-tinkoff-row"
