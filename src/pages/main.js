@@ -31,7 +31,7 @@ function Main() {
             className="payform-tinkoff-row"
             type="hidden"
             name="terminalkey"
-            value="1690797679440"
+            value="1692359317567DEMO"
           />
           <input
             className="payform-tinkoff-row"
