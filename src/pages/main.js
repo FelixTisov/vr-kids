@@ -15,7 +15,6 @@ function Main() {
         <form
           name="payform-tinkoff"
           onSubmit={(e) => {
-            e.preventDefault()
             pay(this)
             return false
           }}
