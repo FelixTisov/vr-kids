@@ -1,8 +1,22 @@
-import React from 'react'
-import './main.css'
+import React, { useState, useRef } from 'react'
 import { Helmet } from 'react-helmet'
+import './main.css'
 
 function Main() {
+  const [price, setPrice] = useState('')
+  const [order, setOrder] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const form = useRef()
+
+  const w = window
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    w.pay(form.current)
+  }
+
   return (
     <div className="body">
       <div className="form-wrapper">
@@ -10,20 +24,14 @@ function Main() {
           <script
             src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"
             type="text/javascript"
-          ></script>
+          />
         </Helmet>
-        <form
-          name="payform-tinkoff"
-          onSubmit={(e) => {
-            pay(this)
-            return false
-          }}
-        >
+        <form name="payform-tinkoff" onSubmit={handleSubmit} ref={form}>
           <input
             className="payform-tinkoff-row"
             type="hidden"
             name="terminalkey"
-            value="1692359317567DEMO"
+            value="1690797679440"
           />
           <input
             className="payform-tinkoff-row"
@@ -39,46 +47,49 @@ function Main() {
           />
           <input
             className="payform-tinkoff-row"
-            type="text"
             placeholder="Сумма заказа"
             name="amount"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
             required
           />
           <input
             className="payform-tinkoff-row"
-            type="text"
             placeholder="Номер заказа"
             name="order"
+            value={order}
+            onChange={(e) => setOrder(e.target.value)}
           />
           <input
             className="payform-tinkoff-row"
             type="text"
-            placeholder="Описание заказа"
-            name="description"
-          />
-          <input
-            className="payform-tinkoff-row"
-            type="text"
-            placeholder="ФИО плательщика"
+            placeholder="Имя"
             name="name"
+            maxLength={15}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             className="payform-tinkoff-row"
-            type="text"
             placeholder="E-mail"
             name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             className="payform-tinkoff-row"
             type="text"
-            placeholder="Контактный телефон"
+            mask="+7(\999) 999-99-99"
+            placeholder="+7 (999) 999-99-99"
             name="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
           />
           <input
             className="payform-tinkoff-row"
             type="submit"
             value="Оплатить"
-          ></input>
+          />
         </form>
       </div>
     </div>
