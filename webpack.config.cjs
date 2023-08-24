@@ -1,11 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-let mode = 'development';
+let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
-  mode = 'production';
+  mode = 'production'
 }
 
 const config = {
@@ -49,7 +49,7 @@ const config = {
       },
       // Images
       {
-        test: /\.(svg)$/i,
+        test: /\.(svg|png)$/i,
         type: 'asset/resource',
       },
       // HTML
@@ -61,8 +61,13 @@ const config = {
           },
         ],
       },
+      // Fonts
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
-};
+}
 
-module.exports = config;
+module.exports = config

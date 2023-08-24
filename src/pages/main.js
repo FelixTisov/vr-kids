@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { Helmet } from 'react-helmet'
-import './main.css'
+import ContactButton from '../components/contact-button/contact-button'
+import './main.scss'
 
 function Main() {
   const [price, setPrice] = useState('')
@@ -19,7 +20,56 @@ function Main() {
 
   return (
     <div className="body">
-      <div className="form-wrapper">
+      <div className="wrapper">
+        <div className="start">
+          <div className="start_content">
+            <div className="start_content-left">
+              <div className="start_content_main-info">
+                <div className="start_content_main-info_title">
+                  <div className="start_content_main-info_h1-container">
+                    <h1>VRKIDS</h1>
+                  </div>
+                  <div className="start_content_main-info_p-container">
+                    <p>
+                      МИР УДИВИТЕЛЬНЫХ ОТКРЫТИЙ
+                      <br />
+                      ДЛЯ ВАШИХ ДЕТЕЙ
+                    </p>
+                  </div>
+                </div>
+                <div className="start_content_main-info_contacts">
+                  <div className="start_content_main-info_contacts_buttons">
+                    <ContactButton
+                      bgColor="#000"
+                      text="ВКОНТАКТЕ"
+                      iconUrl="icon_vk.svg"
+                      alt="vk-icon"
+                    />
+                    <ContactButton
+                      bgColor="#4d9bf5"
+                      text="ТЕЛЕГРАМ"
+                      iconUrl="icon_tg.svg"
+                      alt="tg-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="start_content-right">
+              <div className="start_content_main-image-container">
+                <img
+                  className="start_content_main-image-container_img"
+                  src={require('../images/gir-ltop.png')}
+                  alt="girl-in-vr-helmet"
+                ></img>
+              </div>
+              <div className="start_content_blue-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="form-wrapper">
         <Helmet>
           <script
             src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"
@@ -91,7 +141,7 @@ function Main() {
             value="Оплатить"
           />
         </form>
-      </div>
+      </div> */}
     </div>
   )
 }
