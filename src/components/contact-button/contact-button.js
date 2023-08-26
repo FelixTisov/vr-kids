@@ -2,7 +2,6 @@ import React from 'react'
 import './contact-button.scss'
 
 function ContactButton({ bgColor, iconUrl, text, alt }) {
-  console.log(iconUrl)
   return (
     <div className="contact-button" style={{ backgroundColor: bgColor }}>
       <div className="contact-button_wrapper">

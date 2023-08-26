@@ -1,0 +1,51 @@
+@import '../../assets/variables.scss';
+
+.header-container {
+  @extend %cont-basic;
+  align-items: flex-end;
+  min-height: 78px;
+  max-height: 78px;
+}
+
+.header {
+  @extend %cont-basic;
+  position: fixed;
+  min-width: 694px;
+  max-width: 694px;
+  min-height: 59px;
+  max-height: 59px;
+  border-radius: 22px;
+  z-index: 5;
+  background: rgba(177, 177, 177, 0.65);
+  backdrop-filter: blur(7px);
+
+  .header_buttons-container {
+    @extend %cont-basic;
+    justify-content: space-between;
+    min-width: 532px;
+    max-width: 532px;
+  }
+
+  .header_button {
+    @extend %cont-basic;
+    min-width: 130px;
+    max-width: 130px;
+    min-height: 39px;
+    max-height: 39px;
+    cursor: pointer;
+
+    p {
+      color: #fff;
+      font-family: ComicCAT;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      user-select: none;
+    }
+  }
+
+  .header_button_active {
+    background-color: #828282;
+    border-radius: 14px;
+  }
+}

@@ -1,0 +1,92 @@
+@import '../../assets/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+@font-face {
+  font-family: RifficFree;
+  src: local('RifficFree'),
+    url('../../fonts/RifficFree-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ComicCAT;
+  src: local('ComicCAT'), url('../../fonts/Comic_CAT.otf') format('truetype');
+  font-weight: Regular;
+}
+
+.footer {
+  @extend %cont-basic;
+  min-height: 361px;
+  max-height: 361px;
+
+  .footer_contacts-container {
+    @extend %cont-basic;
+    flex-direction: column;
+    min-width: 643px;
+    max-width: 643px;
+    min-height: 219px;
+    max-height: 219px;
+
+    .footer_contacts-container_contacts {
+      @extend %cont-basic;
+      min-width: inherit;
+      max-width: inherit;
+      min-height: 122px;
+      max-height: 122px;
+
+      .footer_contacts-container_contacts_half {
+        @extend %cont-basic;
+        justify-content: flex-end;
+        width: 50%;
+        min-height: inherit;
+        max-height: inherit;
+
+        .footer_contacts-container_contacts_line {
+          @extend %cont-basic;
+          justify-content: flex-start;
+
+          p {
+            color: #212427;
+            font-family: Roboto;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.88px;
+            margin: 0 0 0 12px;
+          }
+        }
+
+        .footer_contacts-container_contacts_buttons-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          min-width: 216px;
+          max-width: 216px;
+        }
+      }
+
+      .footer_contacts-container_contacts_half-left {
+        flex-direction: column;
+      }
+    }
+
+    .footer_contacts-container_info {
+      @extend %cont-basic;
+      align-items: flex-end;
+      min-width: inherit;
+      max-width: inherit;
+      min-height: 97px;
+      max-height: 97px;
+
+      p {
+        color: #212427;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        letter-spacing: 0.64px;
+        margin: 0;
+      }
+    }
+  }
+}

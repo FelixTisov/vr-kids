@@ -20,6 +20,7 @@
 
 .wrapper {
   @extend %cont-basic;
+  flex-direction: column;
   background-color: #fff;
   max-width: 2048px;
 }
@@ -28,6 +29,7 @@
   @extend %cont-basic;
   max-width: 2048px;
   height: 100vh;
+  margin-top: -78px;
 }
 
 .start_content {
@@ -158,6 +160,235 @@
     max-width: 100%;
     min-height: 100%;
     max-height: 100%;
+  }
+}
+
+.about {
+  @extend %cont-basic;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 1334px;
+  max-height: 1334px;
+
+  .about_section {
+    @extend %cont-basic;
+    min-height: 626px;
+    max-height: 626px;
+
+    .about_group {
+      @extend %cont-basic;
+      min-width: 1291px;
+      max-width: 1291px;
+      min-height: 626px;
+      max-height: 626px;
+
+      .about_group_group-bg {
+        @extend %cont-basic;
+        position: absolute;
+        background-color: #4d9bf5;
+        z-index: 1;
+      }
+
+      .about_group_group-bg_left {
+        border-radius: 0 49px 49px 0;
+      }
+
+      .about_group_group-bg_right {
+        border-radius: 49px 0 0 49px;
+      }
+
+      .about_group_content {
+        @extend %cont-basic;
+        position: absolute;
+        z-index: 2;
+
+        .about_group_content_image-container {
+          @extend %cont-basic;
+          width: 699px;
+
+          .about_group_content_image-container_image {
+            width: 605px;
+            height: 605px;
+          }
+        }
+
+        .about_group_content_text {
+          min-width: 592px;
+          max-width: 592px;
+
+          h3 {
+            color: #fff;
+            font-family: RifficFree;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 500;
+          }
+
+          p {
+            color: #fff;
+            font-family: ComicCAT;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 66.2px;
+            letter-spacing: 1.6px;
+          }
+        }
+      }
+    }
+  }
+
+  .about_section_left {
+    justify-content: flex-start;
+  }
+
+  .about_section_right {
+    justify-content: flex-end;
+  }
+}
+
+.payment {
+  @extend %cont-basic;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 1659px;
+  max-height: 1659px;
+
+  .example-video-wrapper {
+    @extend %cont-basic;
+    align-items: flex-end;
+    min-height: 802px;
+    max-height: 802px;
+    z-index: 2;
+
+    .example-video-container_shadow {
+      @extend %cont-basic;
+      align-items: flex-end;
+      position: absolute;
+      min-width: 1211px;
+      max-width: 1211px;
+      min-height: 681px;
+      max-height: 681px;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.38);
+      box-shadow: 0px -114px 89px 0px rgba(0, 0, 0, 0.65) inset;
+
+      p {
+        color: #fff;
+        text-align: justify;
+        font-family: ComicCAT;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 1.28px;
+      }
+    }
+
+    .example-video-container_video {
+      @extend %cont-basic;
+      align-items: flex-end;
+      position: absolute;
+      min-width: 1211px;
+      max-width: 1211px;
+      min-height: 681px;
+      max-height: 681px;
+      z-index: 1;
+    }
+  }
+
+  .payment-methods {
+    @extend %cont-basic;
+    flex-direction: column;
+    min-height: 857px;
+    max-height: 857px;
+    z-index: 2;
+
+    .payment-methods_title {
+      @extend %cont-basic;
+      min-height: 280px;
+      max-height: 280px;
+
+      h2 {
+        color: #fff;
+        font-family: ComicCAT;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.74px;
+      }
+    }
+
+    .payment-methods_content {
+      @extend %cont-basic;
+      min-height: 576px;
+      max-height: 576px;
+
+      .payment-methods_content_half {
+        @extend %cont-basic;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 50%;
+        min-height: inherit;
+        max-height: inherit;
+        // border: 1px solid black;
+      }
+
+      .pushkin-card {
+        position: absolute;
+        left: 164px;
+        top: 40px;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+          top: 30px;
+        }
+      }
+
+      .bank-card {
+        position: absolute;
+        left: 260px;
+        top: 160px;
+        z-index: 2;
+        cursor: pointer;
+
+        &:hover {
+          top: 150px;
+        }
+      }
+
+      h3 {
+        color: #fff;
+        font-family: ComicCAT;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 155px 0 0 70px;
+        box-sizing: border-box;
+      }
+
+      p {
+        color: #fff;
+        font-family: ComicCAT;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 47.664px;
+        margin: 56px 0 0 70px;
+      }
+    }
+  }
+
+  .payment-bg {
+    @extend %cont-basic;
+    position: absolute;
+    min-height: 1279px;
+    max-height: 1279px;
+    background-color: #4d9bf5;
+    border-radius: 49px 49px 49px 49px;
+    z-index: 1;
   }
 }
 

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: ComicCAT;
+  src: local('ComicCAT'), url('../../fonts/Comic_CAT.otf') format('truetype');
+  font-weight: Regular;
+}
+
+.contact-button-short {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 87px;
+  max-width: 87px;
+  min-height: 87px;
+  max-height: 87px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #4d9bf5;
+  cursor: pointer;
+
+  .contact-button-short_icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 87px;
+    max-height: 87px;
+    min-width: 87px;
+    max-width: 87px;
+
+    .contact-button-short_icon-container_icon {
+      min-height: 36px;
+      max-height: 52px;
+      min-width: 61px;
+      max-width: 58px;
+    }
+  }
+}
