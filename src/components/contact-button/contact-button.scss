@@ -17,6 +17,10 @@
   background: #4d9bf5;
   cursor: pointer;
 
+  a {
+    text-decoration: none;
+  }
+
   .contact-button_wrapper {
     display: flex;
     align-items: center;

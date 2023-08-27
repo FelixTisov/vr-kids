@@ -1,14 +1,49 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import ContactButton from '../components/contact-button/contact-button'
+import PayForm from '../components/pay-form/pay-form'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import './main.scss'
 
 function Main() {
+  const about = useRef()
+  const payment = useRef()
+  const contacts = useRef()
+  const tinkPaymentForm = useRef()
+
+  const handleScrollToBlock = (targetBlock) => {
+    let ref = null
+
+    switch (targetBlock) {
+      case 'about':
+        ref = about
+        break
+      case 'payment':
+        ref = payment
+        break
+      case 'contacts':
+        ref = contacts
+        break
+      default:
+        ref = about
+        break
+    }
+
+    ref.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleOpen = () => {
+    const form = document.querySelector('.payment-form-wrapper')
+    form.style.display = 'flex'
+  }
+
   return (
     <div className="body">
       <div className="wrapper">
-        <Header />
+        <Header handleScrollToBlock={handleScrollToBlock} />
+        <div className="payment-form-wrapper" ref={tinkPaymentForm}>
+          <PayForm />
+        </div>
         <div className="start">
           <div className="start_content">
             <div className="start_content-left">
@@ -32,13 +67,14 @@ function Main() {
                       text="ВКОНТАКТЕ"
                       iconUrl="icon_vk.svg"
                       alt="vk-icon"
+                      link="https://vk.com/vrkids"
                     />
                     <ContactButton
                       bgColor="#4d9bf5"
                       text="ТЕЛЕГРАМ"
                       iconUrl="icon_tg.svg"
                       alt="tg-icon"
-                      style
+                      link="https://t.me/vrkids"
                     />
                   </div>
                 </div>
@@ -56,13 +92,13 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="about">
+        <div ref={about} className="about">
           <div className="about_section about_section_left">
             <div className="about_group">
               <div className="about_group_content">
                 <div className="about_group_content_image-container">
                   <img
-                    className="about_group_content_image-container_image"
+                    className="about_group_content_image-container_image-first"
                     src={require('../images/screaming-boy.png')}
                   ></img>
                 </div>
@@ -80,6 +116,21 @@ function Main() {
           </div>
           <div className="about_section about_section_right">
             <div className="about_group">
+              <div className="about_group_content">
+                <div className="about_group_content_text about_group_content_text_second">
+                  <p>
+                    совершенно новый подход к образованию. Уникальная
+                    возможность погрузиться в виртуальный мир, полный новых
+                    открытий и удивительных историй.
+                  </p>
+                </div>
+                <div className="about_group_content_image-container">
+                  <img
+                    className="about_group_content_image-container_image-second"
+                    src={require('../images/boy-on-skateboard.png')}
+                  ></img>
+                </div>
+              </div>
               <div className="about_group_group-bg about_group_group-bg_right"></div>
             </div>
           </div>
@@ -100,7 +151,7 @@ function Main() {
               ></img>
             </div>
           </div>
-          <div className="payment-methods">
+          <div ref={payment} className="payment-methods">
             <div className="payment-methods_title">
               <h2>ВАРИАНТЫ ОПЛАТЫ</h2>
             </div>
@@ -115,6 +166,7 @@ function Main() {
                   className="bank-card"
                   src={require('../images/bank-card.png')}
                   alt="bankovskaia karta"
+                  onClick={handleOpen}
                 ></img>
               </div>
               <div className="payment-methods_content_half">
@@ -130,7 +182,9 @@ function Main() {
           </div>
           <div className="payment-bg"></div>
         </div>
-        <Footer />
+        <div ref={contacts}>
+          <Footer />
+        </div>
       </div>
     </div>
   )

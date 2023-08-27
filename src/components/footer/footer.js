@@ -31,11 +31,13 @@ function Footer() {
                 bgColor="#000"
                 iconUrl="icon_vk_short.svg"
                 alt="vk-icon"
+                link="https://vk.com/vrkids"
               />
               <ContactButtonShort
                 bgColor="#4d9bf5"
                 iconUrl="icon_tg_short.svg"
                 alt="tg-icon"
+                link="https://t.me/vrkids"
               />
             </div>
           </div>

@@ -1,0 +1,283 @@
+@import '../../assets/variables.scss';
+
+@font-face {
+  font-family: RifficFree;
+  src: local('RifficFree'),
+    url('../../fonts/RifficFree-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ComicCAT;
+  src: local('ComicCAT'), url('../../fonts/Comic_CAT.otf') format('truetype');
+  font-weight: Regular;
+}
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form-container {
+  @extend %cont-basic;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 4;
+  margin-top: -78px;
+}
+
+.form-wrapper {
+  @extend %cont-basic;
+  flex-direction: column;
+  min-width: 802px;
+  max-width: 802px;
+  min-height: 609px;
+  max-height: 609px;
+  border-radius: 30px;
+  background-color: #fff;
+  margin-top: 75px;
+
+  .form-header {
+    @extend %cont-basic;
+    min-height: 94px;
+    max-height: 94px;
+
+    .form-header_side-block {
+      @extend %cont-basic;
+      min-width: 68px;
+      max-width: 68px;
+      min-height: 94px;
+      max-height: 94px;
+
+      .form-header_close {
+        position: absolute;
+        cursor: pointer;
+        margin-bottom: 45px;
+        margin-left: 10px;
+      }
+    }
+
+    .form-header_title {
+      @extend %cont-basic;
+      min-width: 666px;
+      max-width: 666px;
+
+      h2 {
+        color: #212427;
+        font-family: My Font;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 2.21px;
+      }
+    }
+  }
+
+  .payform-tinkoff_form {
+    @extend %cont-basic;
+    flex-direction: column;
+    min-width: 521px;
+    max-width: 521px;
+    min-height: 407px;
+    max-height: 407px;
+
+    .payform-tinkoff_form_top {
+      @extend %cont-basic;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 521px;
+      max-width: 521px;
+      min-height: 351px;
+      max-height: 351px;
+    }
+
+    .payform-tinkoff_input {
+      width: 521px;
+      height: 50px;
+      border-radius: 15px;
+      background: #eaeaea;
+      border: none;
+      padding-left: 12px;
+      box-sizing: border-box;
+      // margin: 10px 0 10px 0;
+
+      &::placeholder {
+        color: #6e6e6e;
+        font-family: ComicCAT;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .participants {
+      @extend %cont-basic;
+      min-width: 521px;
+      max-width: 521px;
+      min-height: 50px;
+      max-height: 50px;
+      border-bottom: 1.5px solid #a1a1a1;
+
+      .participants_title {
+        @extend %cont-basic;
+        justify-content: flex-start;
+        min-width: 350px;
+        max-width: 350px;
+        min-height: 50px;
+        max-height: 50px;
+        padding: 0 0 0 12px;
+        box-sizing: border-box;
+
+        p {
+          color: #212427;
+          font-family: Comic CAT;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+
+      .participants_counter-container {
+        @extend %cont-basic;
+        min-width: 171px;
+        max-width: 171px;
+        min-height: 50px;
+        max-height: 50px;
+        box-sizing: border-box;
+
+        .participants_counter-button {
+          @extend %cont-basic;
+          width: 32.327px;
+          height: 32.327px;
+          background: #bd96c5;
+          cursor: pointer;
+          user-select: none;
+          margin: 0 8px 0 8px;
+
+          color: #212427;
+          font-family: ComicCAT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .participants_counter-amount {
+          @extend %cont-basic;
+          text-align: center;
+          width: 39px;
+          height: 30.327px;
+          flex-shrink: 0;
+          background: #d9d9d9;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .payform-tinkoff_form_bottom {
+      @extend %cont-basic;
+      min-width: 521px;
+      max-width: 521px;
+      min-height: 56px;
+      max-height: 56px;
+
+      .payform-tinkoff_form_bottom_title {
+        @extend %cont-basic;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 132px;
+        max-width: 132px;
+        min-height: 56px;
+        max-height: 56px;
+        box-sizing: border-box;
+        padding: 0 0 0 12px;
+
+        p {
+          color: #212427;
+          font-family: ComicCAT;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .payform-tinkoff_form_bottom_summ {
+        @extend %cont-basic;
+        justify-content: flex-end;
+        min-width: 380px;
+        max-width: 380px;
+        min-height: 56px;
+        max-height: 56px;
+        box-sizing: border-box;
+        padding: 0 20px 0 0;
+
+        input {
+          text-align: right;
+          min-width: 280px;
+          max-width: 280px;
+          margin-right: 12px;
+          border: none;
+          pointer-events: none;
+
+          color: #212427;
+          font-family: ComicCAT;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.3px;
+        }
+
+        p {
+          color: #212427;
+          font-family: ComicCAT;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+  }
+
+  .form-footer {
+    @extend %cont-basic;
+    min-height: 108px;
+    max-height: 108px;
+
+    .payform-tinkoff_form_submit-button {
+      width: 169px;
+      height: 50px;
+      border-radius: 15px;
+      background: #4d9bf5;
+      border: none;
+      cursor: pointer;
+
+      color: #fff;
+      font-family: ComicCAT;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 1.87px;
+    }
+  }
+}

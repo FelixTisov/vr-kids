@@ -25,6 +25,11 @@
   max-width: 2048px;
 }
 
+.payment-form-wrapper {
+  @extend %cont-basic;
+  display: none;
+}
+
 .start {
   @extend %cont-basic;
   max-width: 2048px;
@@ -206,9 +211,16 @@
           @extend %cont-basic;
           width: 699px;
 
-          .about_group_content_image-container_image {
-            width: 605px;
+          .about_group_content_image-container_image-first {
+            width: auto;
             height: 605px;
+            margin-top: 21px;
+          }
+
+          .about_group_content_image-container_image-second {
+            width: auto;
+            height: 781px;
+            margin-bottom: 80px;
           }
         }
 
@@ -233,6 +245,10 @@
             line-height: 66.2px;
             letter-spacing: 1.6px;
           }
+        }
+
+        .about_group_content_text_second {
+          padding-left: 80px;
         }
       }
     }
