@@ -165,6 +165,7 @@ function PayForm() {
                       className=""
                       placeholder="0"
                       name="amount"
+                      type="number"
                       value={price}
                       required
                     />
