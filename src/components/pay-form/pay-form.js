@@ -142,6 +142,9 @@ function PayForm() {
                             if (newNumber < 100) {
                               setNumber(newNumber)
                               setPrice(Math.floor(newNumber) * 400)
+                            } else {
+                              setNumber(99)
+                              setPrice(Math.floor(99) * 400)
                             }
                           }
                         }}
@@ -150,8 +153,10 @@ function PayForm() {
                         className="participants_counter-button"
                         onClick={() => {
                           let newNumber = Number(number) + 1
-                          setNumber(newNumber)
-                          setPrice(newNumber * 400)
+                          if (newNumber < 100) {
+                            setNumber(newNumber)
+                            setPrice(newNumber * 400)
+                          }
                         }}
                       >
                         +
