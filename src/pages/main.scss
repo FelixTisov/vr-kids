@@ -351,6 +351,8 @@
       @extend %cont-basic;
       min-height: 576px;
       max-height: 576px;
+      min-width: 1211px;
+      max-width: 1211px;
 
       .payment-methods_content_half {
         @extend %cont-basic;
@@ -360,12 +362,11 @@
         width: 50%;
         min-height: inherit;
         max-height: inherit;
-        // border: 1px solid black;
       }
 
       .pushkin-card {
         position: absolute;
-        left: 164px;
+        left: 0px;
         top: 40px;
         z-index: 1;
         cursor: pointer;
@@ -377,7 +378,7 @@
 
       .bank-card {
         position: absolute;
-        left: 260px;
+        left: 95px;
         top: 160px;
         z-index: 2;
         cursor: pointer;
