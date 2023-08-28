@@ -219,18 +219,17 @@
 
         .about_group_content_image-container {
           @extend %cont-basic;
+          align-items: flex-end;
           width: 699px;
 
           .about_group_content_image-container_image-first {
             width: auto;
-            height: 605px;
-            margin-top: 21px;
+            height: 95%;
           }
 
           .about_group_content_image-container_image-second {
             width: auto;
-            height: 781px;
-            margin-bottom: 80px;
+            height: 115%;
           }
         }
 
