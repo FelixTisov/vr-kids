@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import ContactButton from '../components/contact-button/contact-button'
 import PayForm from '../components/pay-form/pay-form'
 import Header from '../components/header/header'
@@ -11,6 +11,9 @@ function Main() {
   const contacts = useRef()
   const tinkPaymentForm = useRef()
 
+  const [currentVisibleBlock, setCurrentVisibleBlock] = useState('about')
+
+  // Обработчки прокрутки до определенного блока
   const handleScrollToBlock = (targetBlock) => {
     let ref = null
 
@@ -32,6 +35,34 @@ function Main() {
     ref.current.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // Вычисление нахождения блока в viewport на percentVisible %
+  const isElementXPercentInViewport = function (block, percentVisible) {
+    let rect = block.getBoundingClientRect(),
+      windowHeight = window.innerHeight || document.documentElement.clientHeight
+
+    return !(
+      Math.floor(100 - ((rect.top >= 0 ? 0 : rect.top) / +-rect.height) * 100) <
+        percentVisible ||
+      Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) <
+        percentVisible
+    )
+  }
+
+  // Вычисление текущего видимого блока
+  window.onscroll = function () {
+    let about = document.querySelector('.start')
+    let payment = document.querySelector('.payment')
+    let contacts = document.querySelector('.contacts')
+
+    const blocks = [about, payment, contacts]
+    blocks.forEach((block) => {
+      if (isElementXPercentInViewport(block, 50)) {
+        setCurrentVisibleBlock(block.className)
+      } else return
+    })
+  }
+
+  // Обработчик открытия платежной формы
   const handleOpen = () => {
     const form = document.querySelector('.payment-form-wrapper')
     form.style.display = 'flex'
@@ -40,11 +71,14 @@ function Main() {
   return (
     <div className="body">
       <div className="wrapper">
-        <Header handleScrollToBlock={handleScrollToBlock} />
+        <Header
+          handleScrollToBlock={handleScrollToBlock}
+          currentVisibleBlock={currentVisibleBlock}
+        />
         <div className="payment-form-wrapper" ref={tinkPaymentForm}>
           <PayForm />
         </div>
-        <div className="start">
+        <div ref={about} className="start">
           <div className="start_content">
             <div className="start_content-left">
               <div className="start_content_main-info">
@@ -92,7 +126,7 @@ function Main() {
             </div>
           </div>
         </div>
-        <div ref={about} className="about">
+        <div className="about">
           <div className="about_section about_section_left">
             <div className="about_group">
               <div className="about_group_content">
@@ -182,7 +216,7 @@ function Main() {
           </div>
           <div className="payment-bg"></div>
         </div>
-        <div ref={contacts}>
+        <div ref={contacts} className="contacts">
           <Footer />
         </div>
       </div>
