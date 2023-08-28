@@ -14,7 +14,7 @@ function Footer() {
                 alt="phone icon"
                 className="footer-contacts-line-icon"
               ></img>
-              <p>+79501931645</p>
+              <p>+79159013370</p>
             </div>
             <div className="footer_contacts-container_contacts_line">
               <img
