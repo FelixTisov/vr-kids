@@ -1,0 +1,395 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  @import '../../assets/variables.scss';
+  .wrapper {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .start {
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 640px;
+    min-height: 400px;
+    height: 100vh;
+    max-height: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    // border: 1px solid black;
+  }
+
+  .start_content {
+    top: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 320px;
+    max-width: 640px;
+    min-height: 400px;
+    height: 100%;
+    max-height: 1000px;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+
+    .start_content-left {
+      min-width: 320px;
+      max-width: 640px;
+      min-height: 100%;
+      max-height: 100%;
+      // border: 1px solid blue;
+
+      .start_content_main-info_title {
+        // border: 1px solid yellow;
+        box-sizing: border-box;
+        margin: 0;
+        min-height: 250px;
+        max-height: 250px;
+
+        .start_content_main-info_h1-container {
+          min-height: 120px;
+          max-height: 120px;
+        }
+
+        .start_content_main-info_p-container {
+          min-height: 130px;
+          max-height: 130px;
+        }
+
+        h1 {
+          font-size: 66px;
+        }
+
+        p {
+          font-size: 28px;
+        }
+      }
+
+      .start_content_main-info {
+        @extend %cont-basic;
+        justify-content: space-between;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        flex-direction: column;
+
+        .start_content_main-info_contacts {
+          min-width: 100%;
+          max-width: 100%;
+          max-height: 150px;
+          min-height: 150px;
+
+          .start_content_main-info_contacts_buttons {
+            @extend %cont-basic;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 320px;
+            max-width: 640px;
+            max-height: 150px;
+            min-height: 150px;
+            box-sizing: border-box;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .start_content-right {
+      padding: 15px;
+      position: absolute;
+      min-width: 320px;
+      max-width: 640px;
+      min-height: 260px;
+      max-height: 260px;
+      margin-top: 70%;
+      // border: 1px solid red;
+      box-sizing: border-box;
+
+      .start_content_blue-box {
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 210px;
+        max-height: 210px;
+      }
+
+      .start_content_main-image-container {
+        min-width: 320px;
+        max-width: 640px;
+        min-height: 250px;
+        max-height: 250px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        // background-color: red;
+      }
+
+      .start_content_main-image-container_img {
+        width: 277px;
+        height: 250px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .about {
+    min-width: 320px;
+    max-width: 640px;
+    min-height: 1334px;
+    height: 130vh;
+    max-height: 2500px;
+    // background-color: pink;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    .about_section {
+      @extend %cont-basic;
+
+      min-height: 626px;
+      height: 45%;
+      max-height: 1000px;
+      margin: 0;
+      padding: 0;
+
+      .about_group {
+        @extend %cont-basic;
+        align-items: flex-start;
+        min-width: 320px;
+        max-width: 640px;
+        min-height: 626px;
+        height: 100%;
+        max-height: 1000px;
+        // border: 1px solid black;
+        margin: 0;
+        padding: 0;
+
+        .about_group_group-bg {
+          @extend %cont-basic;
+          position: absolute;
+          background-color: #4d9bf5;
+          z-index: 1;
+          width: 90%;
+          height: 245px;
+          flex-shrink: 0;
+          margin-top: 55px;
+        }
+
+        .about_group_group-bg_left {
+          border-radius: 0 49px 49px 0;
+          left: 0;
+        }
+
+        .about_group_group-bg_right {
+          border-radius: 49px 0 0 49px;
+          right: 0;
+          margin-top: 12px;
+        }
+
+        .about_group_content {
+          flex-direction: column;
+          min-width: 320px;
+          width: 100%;
+          max-width: 640px;
+          justify-content: flex-start;
+
+          .about_group_content_image-container {
+            @extend %cont-basic;
+            align-items: flex-end;
+            width: 90%;
+            height: 300px;
+            // border: 1px solid green;
+
+            .about_group_content_image-container_image-first {
+              width: auto;
+              height: 95%;
+              // margin-bottom: 40px;
+            }
+
+            .about_group_content_image-container_image-second {
+              width: auto;
+              height: 135%;
+              // margin-bottom: 72px;
+            }
+          }
+
+          .about_group_content_text {
+            position: absolute;
+            min-width: 320px;
+            width: 90%;
+            max-width: 640px;
+            margin-top: 80%;
+            // border: 1px solid red;
+
+            h3 {
+              color: #212427;
+              font-family: RifficFree;
+              font-size: 36px;
+              font-style: normal;
+              line-height: 30px;
+              font-weight: 500;
+            }
+
+            p {
+              color: #212427;
+              font-family: ComicCAT;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 40px;
+              letter-spacing: 1.6px;
+            }
+          }
+          .about_group_content_text_second {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .payment {
+    min-width: 320px;
+    max-width: 640px;
+    min-height: 1659px;
+    max-height: 1659px;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    .example-video-wrapper {
+      min-height: 400px;
+      height: 100vh;
+      max-height: 1000px;
+      background-color: green;
+
+      .example-video-container_shadow {
+        min-width: 320px;
+        max-width: 640px;
+        min-height: 400px;
+        height: 100vh;
+        max-height: 1000px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+
+        p {
+          font-size: 22px;
+          line-height: 35px;
+        }
+      }
+
+      .example-video-container_video {
+        min-width: 320px;
+        max-width: 640px;
+        min-height: 400px;
+        height: 100vh;
+        max-height: 1000px;
+
+        .example-video {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+
+    .payment-methods {
+      min-width: 320px;
+      max-width: 640px;
+
+      .payment-methods_title {
+        @extend %cont-basic;
+        min-height: 80px;
+        max-height: 80px;
+
+        h2 {
+          font-size: 34px;
+        }
+      }
+
+      .payment-methods_content {
+        min-width: 320px;
+        max-width: 640px;
+        min-height: 720px;
+        max-height: 720px;
+        flex-direction: column;
+
+        .payment-methods_content_half {
+          min-width: 320px;
+          max-width: 640px;
+          width: 100%;
+          align-items: center;
+
+          .payment-methods_content_half_conditions {
+            @extend %cont-basic;
+            justify-content: flex-start;
+            margin-top: 40px;
+
+            .payment-methods_content_half_conditions_underlined {
+              text-decoration-line: underline;
+              cursor: pointer;
+              margin: 0 0 0 70px;
+            }
+
+            .payment-methods_content_half_conditions_last-text {
+              margin: 0 0 0 5px;
+            }
+          }
+        }
+
+        .pushkin-card {
+          position: absolute;
+          left: 10%;
+          top: 380px;
+          z-index: 1;
+          cursor: pointer;
+          width: 263px;
+          height: 169px;
+
+          &:hover {
+            top: 0;
+          }
+        }
+
+        .bank-card {
+          position: absolute;
+          left: 21%;
+          top: 500px;
+          z-index: 2;
+          cursor: pointer;
+          width: 280px;
+          height: 180px;
+
+          &:hover {
+            top: 0px;
+          }
+        }
+        h3 {
+          font-size: 36px;
+          line-height: 45px;
+          margin: 28px 0 0 70px;
+        }
+        p {
+          font-size: 24px;
+          line-height: 30px;
+          margin: 56px 0 0 70px;
+          margin: 56px 0 0 70px;
+        }
+      }
+    }
+
+    .payment-bg {
+      min-width: 320px;
+      max-width: 640px;
+      min-height: 1103px;
+      max-height: 1103px;
+    }
+  }
+
+  .contacts {
+    min-width: 320px;
+    width: 100%;
+    max-width: 640px;
+  }
+}

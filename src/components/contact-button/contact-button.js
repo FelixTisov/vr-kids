@@ -1,5 +1,6 @@
 import React from 'react'
 import './contact-button.scss'
+import './contact-button_mobile.scss'
 
 function ContactButton({ bgColor, iconUrl, text, alt, link }) {
   return (

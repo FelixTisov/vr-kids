@@ -1,0 +1,22 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  .contact-button {
+    min-width: 236px;
+    max-width: 236px;
+    min-height: 65px;
+    max-height: 65px;
+
+    .contact-button_wrapper_icon-container {
+      min-height: 65px;
+      max-height: 65px;
+    }
+    .contact-button_wrapper_text-container-wrapper {
+      min-height: 65px;
+      max-height: 65px;
+      margin-left: 5px;
+
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+}

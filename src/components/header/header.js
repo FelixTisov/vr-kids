@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './header.scss'
+import './header_mobile.scss'
 
 function Header({ handleScrollToBlock, currentVisibleBlock }) {
   const about = useRef()

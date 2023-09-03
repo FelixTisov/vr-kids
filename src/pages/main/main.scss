@@ -1,21 +1,22 @@
-@import '../assets/variables.scss';
+@import '../../assets/variables.scss';
 
 @font-face {
   font-family: RifficFree;
   src: local('RifficFree'),
-    url('../fonts/RifficFree-Bold.ttf') format('truetype');
+    url('../../fonts/RifficFree-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: ComicCAT;
-  src: local('ComicCAT'), url('../fonts/Comic_CAT.otf') format('truetype');
+  src: local('ComicCAT'), url('../../fonts/Comic_CAT.otf') format('truetype');
   font-weight: Regular;
 }
 
 .body {
   @extend %cont-basic;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -24,6 +25,7 @@
   background-color: #fff;
   min-width: 1024px;
   max-width: 2560px;
+  overflow-x: hidden;
 }
 
 .payment-form-wrapper {
@@ -361,6 +363,31 @@
         width: 50%;
         min-height: inherit;
         max-height: inherit;
+
+        .payment-methods_content_half_conditions {
+          @extend %cont-basic;
+          justify-content: flex-start;
+          margin-top: 40px;
+
+          .payment-methods_content_half_conditions_underlined {
+            text-decoration-line: underline;
+            cursor: pointer;
+            margin: 0 0 0 70px;
+          }
+
+          .payment-methods_content_half_conditions_last-text {
+            margin: 0 0 0 5px;
+          }
+
+          p {
+            margin: 0;
+            color: #fff;
+            font-family: ComicCAT;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
       }
 
       .pushkin-card {
@@ -393,7 +420,7 @@
         font-size: 44px;
         font-style: normal;
         font-weight: 400;
-        margin: 155px 0 0 70px;
+        margin: 90px 0 0 70px;
         box-sizing: border-box;
       }
 

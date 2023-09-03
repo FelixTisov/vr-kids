@@ -4,7 +4,6 @@ import './pay-form.scss'
 
 function PayForm() {
   const [price, setPrice] = useState(400)
-  const [order, setOrder] = useState('')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')

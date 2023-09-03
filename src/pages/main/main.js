@@ -1,11 +1,15 @@
 import React, { useRef, useState } from 'react'
-import ContactButton from '../components/contact-button/contact-button'
-import PayForm from '../components/pay-form/pay-form'
-import Header from '../components/header/header'
-import Footer from '../components/footer/footer'
+import { useNavigate } from 'react-router-dom'
+import ContactButton from '../../components/contact-button/contact-button'
+import PayForm from '../../components/pay-form/pay-form'
+import Header from '../../components/header/header'
+import Footer from '../../components/footer/footer'
 import './main.scss'
+import './main_mobile.scss'
 
 function Main() {
+  const navigate = useNavigate()
+
   const about = useRef()
   const payment = useRef()
   const contacts = useRef()
@@ -37,13 +41,14 @@ function Main() {
 
   // Вычисление нахождения блока в viewport на percentVisible %
   const isElementXPercentInViewport = function (block, percentVisible) {
-    let rect = block.getBoundingClientRect(),
+    let rect = block?.getBoundingClientRect(),
       windowHeight = window.innerHeight || document.documentElement.clientHeight
 
     return !(
-      Math.floor(100 - ((rect.top >= 0 ? 0 : rect.top) / +-rect.height) * 100) <
-        percentVisible ||
-      Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) <
+      Math.floor(
+        100 - ((rect?.top >= 0 ? 0 : rect?.top) / +-rect?.height) * 100
+      ) < percentVisible ||
+      Math.floor(100 - ((rect?.bottom - windowHeight) / rect?.height) * 100) <
         percentVisible
     )
   }
@@ -57,7 +62,7 @@ function Main() {
     const blocks = [about, payment, contacts]
     blocks.forEach((block) => {
       if (isElementXPercentInViewport(block, 50)) {
-        setCurrentVisibleBlock(block.className)
+        setCurrentVisibleBlock(block?.className)
       } else return
     })
   }
@@ -118,7 +123,7 @@ function Main() {
               <div className="start_content_main-image-container">
                 <img
                   className="start_content_main-image-container_img"
-                  src={require('../images/gir-ltop.png')}
+                  src={require('../../images/gir-ltop.png')}
                   alt="girl-in-vr-helmet"
                 ></img>
               </div>
@@ -133,7 +138,7 @@ function Main() {
                 <div className="about_group_content_image-container">
                   <img
                     className="about_group_content_image-container_image-first"
-                    src={require('../images/screaming-boy.png')}
+                    src={require('../../images/screaming-boy.png')}
                   ></img>
                 </div>
                 <div className="about_group_content_text">
@@ -161,7 +166,7 @@ function Main() {
                 <div className="about_group_content_image-container">
                   <img
                     className="about_group_content_image-container_image-second"
-                    src={require('../images/boy-on-skateboard.png')}
+                    src={require('../../images/boy-on-skateboard.png')}
                   ></img>
                 </div>
               </div>
@@ -180,7 +185,8 @@ function Main() {
             </div>
             <div className="example-video-container_video">
               <img
-                src={require('../images/videobg.png')}
+                className="example-video"
+                src={require('../../images/videobg.png')}
                 alt="video example about dinosaurs"
               ></img>
             </div>
@@ -193,24 +199,36 @@ function Main() {
               <div className="payment-methods_content_half">
                 <img
                   className="pushkin-card"
-                  src={require('../images/pushkin-card.png')}
+                  src={require('../../images/pushkin-card.png')}
                   alt="pushkinskaia karta"
                 ></img>
                 <img
                   className="bank-card"
-                  src={require('../images/bank-card.png')}
+                  src={require('../../images/bank-card.png')}
                   alt="bankovskaia karta"
                   onClick={handleOpen}
                 ></img>
               </div>
               <div className="payment-methods_content_half">
-                <div className=""></div>
                 <h3>ПРОСТО. БЫСТРО. УДОБНО.</h3>
                 <p>
                   Выберите наиболее подходящий
                   <br />
                   вам метод оплаты.
                 </p>
+                <div className="payment-methods_content_half_conditions">
+                  <p
+                    onClick={() => {
+                      navigate('/conditions')
+                    }}
+                    className="payment-methods_content_half_conditions_underlined"
+                  >
+                    Условия
+                  </p>
+                  <p className="payment-methods_content_half_conditions_last-text">
+                    предоставления услуг
+                  </p>
+                </div>
               </div>
             </div>
           </div>

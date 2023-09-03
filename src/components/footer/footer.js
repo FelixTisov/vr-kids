@@ -1,6 +1,7 @@
 import React from 'react'
 import ContactButtonShort from '../contact-button-short/contact-button-short'
 import './footer.scss'
+import './footer_mobile.scss'
 
 function Footer() {
   return (
@@ -22,7 +23,7 @@ function Footer() {
                 alt="mail icon"
                 className="footer-contacts-line-icon"
               ></img>
-              <p>vrkids@gmail.com</p>
+              <p>manager@vrkids.ru</p>
             </div>
           </div>
           <div className="footer_contacts-container_contacts_half">
