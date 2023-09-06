@@ -26,6 +26,7 @@
   min-width: 1024px;
   max-width: 2560px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .payment-form-wrapper {
@@ -322,6 +323,11 @@
       min-height: 681px;
       max-height: 681px;
       z-index: 1;
+
+      .example-video {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 

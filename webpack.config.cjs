@@ -52,6 +52,11 @@ const config = {
         test: /\.(svg|png)$/i,
         type: 'asset/resource',
       },
+      // Videos
+      {
+        test: /\.(mp4)$/i,
+        type: 'asset/resource',
+      },
       // HTML
       {
         test: /\.html$/,

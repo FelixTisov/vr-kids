@@ -1,0 +1,134 @@
+@function randomSize() {
+  $sizes: 30, 40, 50, 60, 70, 80, 90, 100, 120, 150;
+  $nth: nth($sizes, random(9));
+
+  @return $nth;
+}
+
+@function randomDelay() {
+  $rand: random();
+  $randomNum: 0 + floor($rand * ((5 - 0) + 1));
+
+  @return $randomNum;
+}
+
+@function randomDuration() {
+  $amounts: 15, 20, 25, 30, 35, 40, 45, 50;
+  $nth: nth($amounts, random(7));
+
+  @return $nth;
+}
+
+@for $i from 1 to 15 {
+  li:nth-child(#{$i}) {
+    $size: randomSize();
+    width: #{$size}px;
+    height: #{$size}px;
+    animation-delay: #{randomDelay()}s;
+    animation-duration: #{randomDuration()}s;
+  }
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  background: rgba(189, 150, 197, 0.32);
+  animation: animate 25s linear infinite;
+  bottom: 1659px;
+  border-radius: 15px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  animation-duration: 25s;
+}
+
+.circles li:nth-child(11) {
+  left: 65%;
+  animation-duration: 50s;
+}
+
+.circles li:nth-child(12) {
+  left: 20%;
+  animation-duration: 50s;
+}
+
+.circles li:nth-child(13) {
+  left: 40%;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(14) {
+  left: 90%;
+  animation-duration: 40s;
+}
+
+.circles li:nth-child(11) {
+  left: 50%;
+  animation-duration: 30s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 10%;
+  }
+
+  100% {
+    transform: translateY(-3600%) rotate(720deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
+}

@@ -4,6 +4,7 @@ import ContactButton from '../../components/contact-button/contact-button'
 import PayForm from '../../components/pay-form/pay-form'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
+import AnimatedBg from '../../components/animated-bg/animated-bg'
 import './main.scss'
 import './main_mobile.scss'
 
@@ -75,7 +76,7 @@ function Main() {
 
   return (
     <div className="body">
-      <div className="wrapper">
+      <div className="wrapper area">
         <Header
           handleScrollToBlock={handleScrollToBlock}
           currentVisibleBlock={currentVisibleBlock}
@@ -83,6 +84,7 @@ function Main() {
         <div className="payment-form-wrapper" ref={tinkPaymentForm}>
           <PayForm />
         </div>
+        <AnimatedBg />
         <div ref={about} className="start">
           <div className="start_content">
             <div className="start_content-left">
@@ -123,7 +125,7 @@ function Main() {
               <div className="start_content_main-image-container">
                 <img
                   className="start_content_main-image-container_img"
-                  src={require('../../images/gir-ltop.png')}
+                  src={require('../../images/gir-ltop1.png')}
                   alt="girl-in-vr-helmet"
                 ></img>
               </div>
@@ -184,11 +186,17 @@ function Main() {
               </p>
             </div>
             <div className="example-video-container_video">
-              <img
+              {/* <img
                 className="example-video"
                 src={require('../../images/videobg.png')}
                 alt="video example about dinosaurs"
-              ></img>
+              ></img> */}
+              <video
+                className="example-video"
+                autoPlay
+                loop
+                src={require('../../videos/video.mp4')}
+              ></video>
             </div>
           </div>
           <div ref={payment} className="payment-methods">
@@ -218,9 +226,9 @@ function Main() {
                 </p>
                 <div className="payment-methods_content_half_conditions">
                   <p
-                    onClick={() => {
-                      navigate('/conditions')
-                    }}
+                    // onClick={() => {
+                    //   navigate('/conditions')
+                    // }}
                     className="payment-methods_content_half_conditions_underlined"
                   >
                     Условия
