@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import ContactButton from '../../components/contact-button/contact-button'
 import PayForm from '../../components/pay-form/pay-form'
 import Header from '../../components/header/header'
@@ -9,8 +8,6 @@ import './main.scss'
 import './main_mobile.scss'
 
 function Main() {
-  const navigate = useNavigate()
-
   const about = useRef()
   const payment = useRef()
   const contacts = useRef()
@@ -186,17 +183,12 @@ function Main() {
               </p>
             </div>
             <div className="example-video-container_video">
-              {/* <img
-                className="example-video"
-                src={require('../../images/videobg.png')}
-                alt="video example about dinosaurs"
-              ></img> */}
-              <video
-                className="example-video"
-                autoPlay
-                loop
-                src={require('../../videos/video.mp4')}
-              ></video>
+              <video className="example-video" autoPlay loop muted>
+                <source
+                  type="video/mp4"
+                  src={require('../../videos/video.mp4')}
+                ></source>
+              </video>
             </div>
           </div>
           <div ref={payment} className="payment-methods">
@@ -225,12 +217,7 @@ function Main() {
                   вам метод оплаты.
                 </p>
                 <div className="payment-methods_content_half_conditions">
-                  <p
-                    // onClick={() => {
-                    //   navigate('/conditions')
-                    // }}
-                    className="payment-methods_content_half_conditions_underlined"
-                  >
+                  <p className="payment-methods_content_half_conditions_underlined">
                     Условия
                   </p>
                   <p className="payment-methods_content_half_conditions_last-text">

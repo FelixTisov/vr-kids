@@ -6,11 +6,6 @@ function AnimatedBg() {
   return (
     <div className="animated-bg-warapper">
       <ul class="circles">
-        {/* {() => {
-          for (let i = 0; i < 14; i++) {
-            return <li></li>
-          }
-        }} */}
         <li></li>
         <li></li>
         <li></li>
