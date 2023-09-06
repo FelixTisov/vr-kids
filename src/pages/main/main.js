@@ -4,6 +4,7 @@ import PayForm from '../../components/pay-form/pay-form'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import AnimatedBg from '../../components/animated-bg/animated-bg'
+import Conditions from '../../components/conditions/conditions'
 import './main.scss'
 import './main_mobile.scss'
 
@@ -11,7 +12,6 @@ function Main() {
   const about = useRef()
   const payment = useRef()
   const contacts = useRef()
-  const tinkPaymentForm = useRef()
 
   const [currentVisibleBlock, setCurrentVisibleBlock] = useState('about')
 
@@ -66,8 +66,14 @@ function Main() {
   }
 
   // Обработчик открытия платежной формы
-  const handleOpen = () => {
+  const handleOpenPayForm = () => {
     const form = document.querySelector('.payment-form-wrapper')
+    form.style.display = 'flex'
+  }
+
+  // Обработчик открытия окна условий оказаняи услуг
+  const handleOpenConditions = () => {
+    const form = document.querySelector('.conditions-wrapper')
     form.style.display = 'flex'
   }
 
@@ -78,8 +84,11 @@ function Main() {
           handleScrollToBlock={handleScrollToBlock}
           currentVisibleBlock={currentVisibleBlock}
         />
-        <div className="payment-form-wrapper" ref={tinkPaymentForm}>
+        <div className="payment-form-wrapper">
           <PayForm />
+        </div>
+        <div className="conditions-wrapper">
+          <Conditions />
         </div>
         <AnimatedBg />
         <div ref={about} className="start">
@@ -206,7 +215,7 @@ function Main() {
                   className="bank-card"
                   src={require('../../images/bank-card.png')}
                   alt="bankovskaia karta"
-                  onClick={handleOpen}
+                  onClick={handleOpenPayForm}
                 ></img>
               </div>
               <div className="payment-methods_content_half">
@@ -217,7 +226,10 @@ function Main() {
                   вам метод оплаты.
                 </p>
                 <div className="payment-methods_content_half_conditions">
-                  <p className="payment-methods_content_half_conditions_underlined">
+                  <p
+                    onClick={handleOpenConditions}
+                    className="payment-methods_content_half_conditions_underlined"
+                  >
                     Условия
                   </p>
                   <p className="payment-methods_content_half_conditions_last-text">

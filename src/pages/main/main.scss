@@ -34,6 +34,11 @@
   display: none;
 }
 
+.conditions-wrapper {
+  @extend %cont-basic;
+  display: none;
+}
+
 .start {
   @extend %cont-basic;
   min-width: 1024px;
