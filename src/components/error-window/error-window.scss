@@ -1,0 +1,81 @@
+@import '../../assets/variables.scss';
+
+@font-face {
+  font-family: RifficFree;
+  src: local('RifficFree'),
+    url('../../fonts/RifficFree-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ComicCAT;
+  src: local('ComicCAT'), url('../../fonts/Comic_CAT.otf') format('truetype');
+  font-weight: Regular;
+}
+
+.error-window {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.error-window-container {
+  @extend %cont-basic;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 4;
+  margin-top: -78px;
+
+  .error-window-wrapper {
+    @extend %cont-basic;
+    flex-direction: column;
+    min-width: 802px;
+    max-width: 802px;
+    min-height: 409px;
+    max-height: 409px;
+    border-radius: 30px;
+    background-color: #fff;
+    margin-top: 75px;
+
+    .form-header {
+      @extend %cont-basic;
+      justify-content: space-between;
+      min-height: 94px;
+      max-height: 94px;
+
+      .form-header_side-block {
+        @extend %cont-basic;
+        min-width: 68px;
+        max-width: 68px;
+        min-height: 94px;
+        max-height: 94px;
+
+        .form-header_close {
+          position: absolute;
+          cursor: pointer;
+          margin-bottom: 45px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .error-window-text-container {
+      @extend %cont-basic;
+      min-height: 315px;
+      max-height: 315px;
+      p {
+        color: #212427;
+        font-family: ComicCAT;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 120px;
+      }
+    }
+  }
+}

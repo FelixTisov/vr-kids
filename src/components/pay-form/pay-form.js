@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import './pay-form.scss'
+import './pay-form_mobile.scss'
 
 function PayForm() {
   const [price, setPrice] = useState(400)

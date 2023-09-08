@@ -5,6 +5,7 @@ import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import AnimatedBg from '../../components/animated-bg/animated-bg'
 import Conditions from '../../components/conditions/conditions'
+import ErrorWindow from '../../components/error-window/error-window'
 import './main.scss'
 import './main_mobile.scss'
 
@@ -71,6 +72,12 @@ function Main() {
     form.style.display = 'flex'
   }
 
+  // Обработчик открытия окна ошибки
+  const handleOpenErrorWindow = () => {
+    const form = document.querySelector('.error-window-wrapper')
+    form.style.display = 'flex'
+  }
+
   // Обработчик открытия окна условий оказаняи услуг
   const handleOpenConditions = () => {
     const form = document.querySelector('.conditions-wrapper')
@@ -84,6 +91,9 @@ function Main() {
           handleScrollToBlock={handleScrollToBlock}
           currentVisibleBlock={currentVisibleBlock}
         />
+        <div className="error-window-wrapper">
+          <ErrorWindow />
+        </div>
         <div className="payment-form-wrapper">
           <PayForm />
         </div>
@@ -192,10 +202,16 @@ function Main() {
               </p>
             </div>
             <div className="example-video-container_video">
-              <video className="example-video" autoPlay loop muted>
+              <video
+                className="example-video"
+                autoPlay={true}
+                muted
+                loop
+                playsInline={true}
+              >
                 <source
-                  type="video/mp4"
-                  src={require('../../videos/video.mp4')}
+                  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+                  src={require('../../videos/example-video.mp4')}
                 ></source>
               </video>
             </div>
@@ -210,12 +226,15 @@ function Main() {
                   className="pushkin-card"
                   src={require('../../images/pushkin-card.png')}
                   alt="pushkinskaia karta"
+                  onClick={handleOpenErrorWindow}
+                  onTouchEnd={handleOpenErrorWindow}
                 ></img>
                 <img
                   className="bank-card"
                   src={require('../../images/bank-card.png')}
                   alt="bankovskaia karta"
                   onClick={handleOpenPayForm}
+                  onTouchEnd={handleOpenPayForm}
                 ></img>
               </div>
               <div className="payment-methods_content_half">

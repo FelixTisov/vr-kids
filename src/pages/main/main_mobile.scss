@@ -1,5 +1,6 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
   @import '../../assets/variables.scss';
+
   .wrapper {
     min-width: 320px;
     max-width: 640px;
@@ -18,7 +19,6 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    // border: 1px solid black;
   }
 
   .start_content {
@@ -360,9 +360,13 @@
           cursor: pointer;
           width: 280px;
           height: 180px;
+          // pointer-events: none;
 
           &:hover {
             top: 0px;
+          }
+          &:active {
+            pointer-events: none;
           }
         }
         h3 {

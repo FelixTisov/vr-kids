@@ -1,0 +1,22 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  .error-window-container {
+    min-width: 320px;
+    max-width: 640px;
+
+    .error-window-wrapper {
+      min-width: 320px;
+      width: 100%;
+      max-width: 640px;
+      min-height: 100vh;
+      max-height: 100vh;
+
+      .error-window-text-container {
+        min-height: 515px;
+        max-height: 515px;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './conditions.scss'
+import './conditions_mobile.scss'
 
 function Conditions() {
   // Обработчик закрытия формы

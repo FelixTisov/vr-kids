@@ -29,6 +29,11 @@
   overflow-y: hidden;
 }
 
+.error-window-wrapper {
+  @extend %cont-basic;
+  display: none;
+}
+
 .payment-form-wrapper {
   @extend %cont-basic;
   display: none;

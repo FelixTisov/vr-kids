@@ -1,0 +1,117 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  @import '../../assets/variables.scss';
+
+  @font-face {
+    font-family: RifficFree;
+    src: local('RifficFree'),
+      url('../../fonts/RifficFree-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: ComicCAT;
+    src: local('ComicCAT'), url('../../fonts/Comic_CAT.otf') format('truetype');
+    font-weight: Regular;
+  }
+
+  .form-container {
+    min-width: 320px;
+    max-width: 640px;
+
+    .form-wrapper {
+      min-width: 320px;
+      width: 100%;
+      max-width: 640px;
+      min-height: 100vh;
+      max-height: 100vh;
+
+      .form-header {
+        justify-content: space-between;
+
+        .form-header_title {
+          min-width: 40px;
+          max-width: 640px;
+        }
+      }
+
+      .payform-tinkoff_form {
+        min-width: 320px;
+        width: 100%;
+        max-width: 640px;
+
+        .payform-tinkoff_form_top {
+          min-width: 320px;
+          width: 100%;
+          max-width: 640px;
+        }
+
+        .payform-tinkoff_input {
+          width: 300px;
+        }
+
+        .participants {
+          flex-direction: column;
+          align-items: flex-start;
+          min-width: 300px;
+          max-width: 300px;
+          min-height: 90px;
+          max-height: 90px;
+
+          .participants_title {
+            min-width: 300px;
+            max-width: 300px;
+          }
+
+          .participants_counter-container {
+            margin-left: -13px;
+            margin-bottom: 10px;
+            .participants_counter-button {
+              font-size: 18px;
+            }
+
+            .participants_counter-amount {
+              width: 40px;
+              height: 32px;
+              border-radius: 0;
+              font-size: 18px;
+              box-sizing: border-box;
+            }
+          }
+        }
+
+        .payform-tinkoff_form_bottom {
+          justify-content: space-between;
+          min-width: 320px;
+          width: 100%;
+          max-width: 640px;
+
+          .payform-tinkoff_form_bottom_title {
+            min-width: 110px;
+            max-width: 110px;
+
+            p {
+              margin-left: 13px;
+              font-size: 20px;
+            }
+          }
+
+          .payform-tinkoff_form_bottom_summ {
+            min-width: 100px;
+            max-width: 100px;
+
+            input {
+              min-width: 100px;
+              max-width: 100px;
+            }
+          }
+        }
+      }
+
+      .form-footer {
+        min-width: 320px;
+        width: 100%;
+        max-width: 640px;
+      }
+    }
+  }
+}
