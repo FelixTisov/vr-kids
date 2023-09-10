@@ -204,11 +204,12 @@
     .about_group {
       @extend %cont-basic;
       min-width: 400px;
-      width: 80%;
+      width: 85%;
       max-width: 2000px;
       min-height: 626px;
       height: 100%;
       max-height: 1000px;
+      // margin-left: -50px;
 
       .about_group_group-bg {
         @extend %cont-basic;
@@ -278,10 +279,100 @@
 
   .about_section_left {
     justify-content: flex-start;
+    transform: translateX(-85%);
   }
 
   .about_section_right {
     justify-content: flex-end;
+    transform: translateX(85%);
+  }
+
+  .block-in {
+    animation: in 1s both;
+    -webkit-animation: in 1s both;
+  }
+
+  @-webkit-keyframes in {
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+  @keyframes in {
+    50% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(-100px);
+    }
+  }
+
+  .block-out {
+    animation: out 1s both;
+    -webkit-animation: out 1s both;
+  }
+
+  @-webkit-keyframes out {
+    0% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(-85%);
+    }
+  }
+  @keyframes out {
+    0% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(-85%);
+    }
+  }
+
+  .block-in-right {
+    animation: in-right 1s both;
+    -webkit-animation: in-right 1s both;
+  }
+
+  @-webkit-keyframes in-right {
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  @keyframes in-right {
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(100px);
+    }
+  }
+
+  .block-out-right {
+    animation: out-right 1s both;
+    -webkit-animation: out-right 1s both;
+  }
+
+  @-webkit-keyframes out-right {
+    0% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(85%);
+    }
+  }
+  @keyframes out-right {
+    0% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(85%);
+    }
   }
 }
 

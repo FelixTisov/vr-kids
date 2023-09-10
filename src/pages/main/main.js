@@ -84,6 +84,59 @@ function Main() {
     form.style.display = 'flex'
   }
 
+  /* Сдвиг бг при прокрутке */
+  window.onscroll = function () {
+    // Для левого блока
+    let blockLeft = document.querySelector('.about_section_left')
+    let offsetTopLeft = blockLeft?.getBoundingClientRect().top
+    let offsetLeft = blockLeft?.getBoundingClientRect().left
+
+    if (
+      (offsetTopLeft < 0 && -offsetTopLeft < blockLeft.offsetHeight * 0.5) ||
+      (offsetTopLeft > 0 && offsetTopLeft < blockLeft.offsetHeight * 0.5)
+    ) {
+      blockLeft.classList.add('block-in')
+    } else {
+      blockLeft.classList.remove('block-in')
+    }
+
+    if (
+      (offsetTopLeft < 0 && -offsetTopLeft > blockLeft.offsetHeight * 0.5) ||
+      (offsetTopLeft > 0 &&
+        offsetTopLeft > blockLeft.offsetHeight * 0.5 &&
+        -offsetLeft < blockLeft.offsetWidth * 0.84)
+    ) {
+      blockLeft.classList.add('block-out')
+    } else {
+      blockLeft.classList.remove('block-out')
+    }
+
+    // Для правого блока
+    let blockRight = document.querySelector('.about_section_right')
+    let offsetTopRight = blockRight?.getBoundingClientRect().top
+    let offsetRight = blockRight?.getBoundingClientRect().left
+
+    if (
+      (offsetTopRight < 0 && -offsetTopRight < blockRight.offsetHeight * 0.5) ||
+      (offsetTopRight > 0 && offsetTopRight < blockRight.offsetHeight * 0.5)
+    ) {
+      blockRight.classList.add('block-in-right')
+    } else {
+      blockRight.classList.remove('block-in-right')
+    }
+
+    if (
+      (offsetTopRight < 0 && -offsetTopRight > blockRight.offsetHeight * 0.5) ||
+      (offsetTopRight > 0 &&
+        offsetTopRight > blockRight.offsetHeight * 0.5 &&
+        -offsetRight < blockRight.offsetWidth * 0.84)
+    ) {
+      blockRight.classList.add('block-out-right')
+    } else {
+      blockRight.classList.remove('block-out-right')
+    }
+  }
+
   return (
     <div className="body">
       <div className="wrapper area">
