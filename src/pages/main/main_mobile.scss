@@ -170,7 +170,7 @@
           position: absolute;
           background-color: #4d9bf5;
           z-index: 1;
-          width: 90%;
+          width: 100%;
           height: 245px;
           flex-shrink: 0;
           margin-top: 55px;
@@ -179,12 +179,14 @@
         .about_group_group-bg_left {
           border-radius: 0 49px 49px 0;
           left: 0;
+          margin-left: -5%;
         }
 
         .about_group_group-bg_right {
           border-radius: 49px 0 0 49px;
           right: 0;
           margin-top: 12px;
+          margin-right: -5%;
         }
 
         .about_group_content {
@@ -245,6 +247,84 @@
             padding-left: 0;
           }
         }
+      }
+    }
+
+    .about_section_left {
+      justify-content: flex-start;
+      transform: translateX(-95%);
+    }
+
+    .about_section_right {
+      justify-content: flex-end;
+      transform: translateX(95%);
+    }
+
+    @-webkit-keyframes in {
+      50% {
+        transform: translateX(5%);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes in {
+      50% {
+        transform: translateX(5%);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @-webkit-keyframes out {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    @keyframes out {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @-webkit-keyframes in-right {
+      50% {
+        transform: translateX(-5%);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes in-right {
+      50% {
+        transform: translateX(-5%);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @-webkit-keyframes out-right {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    @keyframes out-right {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(100%);
       }
     }
   }
