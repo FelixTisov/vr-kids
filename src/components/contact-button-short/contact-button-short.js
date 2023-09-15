@@ -1,5 +1,6 @@
 import React from 'react'
 import './contact-button-short.scss'
+import './contact-button-short_mobile.scss'
 
 function ContactButtonShort({ bgColor, iconUrl, alt, link }) {
   return (

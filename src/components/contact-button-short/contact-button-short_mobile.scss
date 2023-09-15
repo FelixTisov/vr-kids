@@ -1,0 +1,22 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  .contact-button-short {
+    min-width: 75px;
+    max-width: 75px;
+    min-height: 75px;
+    max-height: 75px;
+
+    .contact-button-short_icon-container {
+      min-height: 75px;
+      max-height: 75px;
+      min-width: 75px;
+      max-width: 75px;
+
+      .contact-button-short_icon-container_icon {
+        min-height: 31px;
+        max-height: 44.72px;
+        min-width: 52.46px;
+        max-width: 50px;
+      }
+    }
+  }
+}
