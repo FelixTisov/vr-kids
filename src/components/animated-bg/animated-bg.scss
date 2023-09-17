@@ -147,7 +147,7 @@
   display: block;
   list-style: none;
   background: rgba(189, 150, 197, 0.32);
-  animation: animate 25s linear 1;
+  animation: animate 25s linear forwards;
   bottom: 3159px;
   border-radius: 15px;
 }

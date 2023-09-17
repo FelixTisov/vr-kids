@@ -209,7 +209,6 @@
       min-height: 626px;
       height: 100%;
       max-height: 1000px;
-      // margin-left: -50px;
 
       .about_group_group-bg {
         @extend %cont-basic;
@@ -556,16 +555,10 @@
   }
 }
 
-.form-wrapper {
-  display: flex;
-  width: 250px;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
-}
-
-.payform-tinkoff-row {
+.contacts {
   display: block;
-  margin: 1%;
-  width: 160px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 361px;
+  max-height: 361px;
 }

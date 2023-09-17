@@ -2,6 +2,9 @@
   .error-window-container {
     min-width: 320px;
     max-width: 640px;
+    top: 0;
+    z-index: 9;
+    margin-top: 0;
 
     .error-window-wrapper {
       min-width: 320px;
@@ -9,6 +12,14 @@
       max-width: 640px;
       min-height: 100vh;
       max-height: 100vh;
+      justify-content: flex-start;
+      margin-top: 0;
+      border-radius: 0;
+
+      .form-header {
+        margin: 0;
+        top: 0;
+      }
 
       .error-window-text-container {
         min-height: 515px;

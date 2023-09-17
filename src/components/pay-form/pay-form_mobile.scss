@@ -17,6 +17,10 @@
   .form-container {
     min-width: 320px;
     max-width: 640px;
+    min-height: 100vh;
+    max-height: 100vh;
+    z-index: 9;
+    margin-top: 0;
 
     .form-wrapper {
       min-width: 320px;
@@ -24,6 +28,9 @@
       max-width: 640px;
       min-height: 100vh;
       max-height: 100vh;
+      border-radius: 0;
+      justify-content: flex-start;
+      margin-top: 0;
 
       .form-header {
         justify-content: space-between;
