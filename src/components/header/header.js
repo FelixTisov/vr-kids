@@ -84,7 +84,7 @@ function Header({ handleScrollToBlock, currentVisibleBlock }) {
 
   return (
     <div className="header-container">
-      {/* Мобильное меню */}
+      Мобильное меню
       <div className="mobile-menu">
         <div className="menu-btn" onClick={menuBtnHandler}>
           <div className="open-btn" style={{ visibility: openIsVisible }}>
@@ -130,7 +130,6 @@ function Header({ handleScrollToBlock, currentVisibleBlock }) {
           </div>
         </div>
       </div>
-
       {/* Десктопная шапка */}
       <div className="header">
         <div className="header_buttons-container">

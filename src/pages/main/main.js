@@ -53,7 +53,7 @@ function Main() {
   }
 
   // Вычисление текущего видимого блока
-  window.onscroll = function () {
+  function CheckCurrentBlock() {
     let about = document.querySelector('.start')
     let payment = document.querySelector('.payment')
     let contacts = document.querySelector('.contacts')
@@ -66,26 +66,8 @@ function Main() {
     })
   }
 
-  // Обработчик открытия платежной формы
-  const handleOpenPayForm = () => {
-    const form = document.querySelector('.payment-form-wrapper')
-    form.style.display = 'flex'
-  }
-
-  // Обработчик открытия окна ошибки
-  const handleOpenErrorWindow = () => {
-    const form = document.querySelector('.error-window-wrapper')
-    form.style.display = 'flex'
-  }
-
-  // Обработчик открытия окна условий оказаняи услуг
-  const handleOpenConditions = () => {
-    const form = document.querySelector('.conditions-wrapper')
-    form.style.display = 'flex'
-  }
-
-  /* Сдвиг бг при прокрутке */
-  window.onscroll = function () {
+  // Анимация выезда блоков
+  function CheckMoveSlides() {
     // Для левого блока
     let blockLeft = document.querySelector('.about_section_left')
     let offsetTopLeft = blockLeft?.getBoundingClientRect().top
@@ -135,6 +117,29 @@ function Main() {
     } else {
       blockRight.classList.remove('block-out-right')
     }
+  }
+
+  window.onscroll = function () {
+    CheckCurrentBlock()
+    CheckMoveSlides()
+  }
+
+  // Обработчик открытия платежной формы
+  const handleOpenPayForm = () => {
+    const form = document.querySelector('.payment-form-wrapper')
+    form.style.display = 'flex'
+  }
+
+  // Обработчик открытия окна ошибки
+  const handleOpenErrorWindow = () => {
+    const form = document.querySelector('.error-window-wrapper')
+    form.style.display = 'flex'
+  }
+
+  // Обработчик открытия окна условий оказаняи услуг
+  const handleOpenConditions = () => {
+    const form = document.querySelector('.conditions-wrapper')
+    form.style.display = 'flex'
   }
 
   return (
