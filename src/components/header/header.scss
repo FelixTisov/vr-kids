@@ -1,5 +1,9 @@
 @import '../../assets/variables.scss';
 
+.mobile-menu {
+  display: none;
+}
+
 .header-container {
   @extend %cont-basic;
   align-items: flex-end;

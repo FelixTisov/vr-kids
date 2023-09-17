@@ -6,6 +6,24 @@ function AnimatedBg() {
   return (
     <div className="animated-bg-warapper">
       <ul class="circles">
+        <ul className="start-circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
         <li></li>
         <li></li>
         <li></li>
