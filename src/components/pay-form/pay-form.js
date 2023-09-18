@@ -60,24 +60,28 @@ function PayForm() {
                     type="hidden"
                     name="terminalkey"
                     value="1692359317567DEMO"
+                    readOnly
                   />
                   <input
                     className="payform-tinkoff_input"
                     type="hidden"
                     name="frame"
                     value="false"
+                    readOnly
                   />
                   <input
                     className="payform-tinkoff_input"
                     type="hidden"
                     name="language"
                     value="ru"
+                    readOnly
                   />
                   <input
                     className="payform-tinkoff_input"
                     type="hidden"
                     name="order"
                     value=""
+                    readOnly
                   />
                   <input
                     className="payform-tinkoff_input"
@@ -107,7 +111,7 @@ function PayForm() {
                     required
                   />
                   <input
-                    class="payform-tinkoff_input"
+                    className="payform-tinkoff_input"
                     type="text"
                     placeholder="Дополнительная информация"
                     name="description"
@@ -187,6 +191,7 @@ function PayForm() {
                   className="payform-tinkoff_form_submit-button"
                   type="submit"
                   value="ДАЛЕЕ"
+                  readOnly
                 />
               </div>
             </form>

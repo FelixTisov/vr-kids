@@ -5,7 +5,7 @@ import './animated-bg_mobile.scss'
 function AnimatedBg() {
   return (
     <div className="animated-bg-warapper">
-      <ul class="circles">
+      <ul className="circles">
         <ul className="start-circles">
           <li></li>
           <li></li>
