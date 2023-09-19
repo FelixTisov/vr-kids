@@ -73,24 +73,26 @@ function Main() {
     let offsetTopLeft = blockLeft?.getBoundingClientRect().top
     let offsetLeft = blockLeft?.getBoundingClientRect().left
 
-    if (
-      (offsetTopLeft < 0 && -offsetTopLeft < blockLeft.offsetHeight * 0.5) ||
-      (offsetTopLeft > 0 && offsetTopLeft < blockLeft.offsetHeight * 0.5)
-    ) {
-      blockLeft.classList.add('block-in')
+    if (Math.abs(offsetTopLeft) < blockLeft.offsetHeight * 0.5) {
+      if (
+        Math.floor(Math.abs(offsetLeft)) >
+        Math.abs(blockLeft.offsetWidth * 0.849)
+      )
+        blockLeft.classList.add('block-in')
     } else {
-      blockLeft.classList.remove('block-in')
+      if (Math.floor(Math.abs(offsetLeft)) === 100)
+        blockLeft.classList.remove('block-in')
     }
 
-    if (
-      (offsetTopLeft < 0 && -offsetTopLeft > blockLeft.offsetHeight * 0.5) ||
-      (offsetTopLeft > 0 &&
-        offsetTopLeft > blockLeft.offsetHeight * 0.5 &&
-        -offsetLeft < blockLeft.offsetWidth * 0.84)
-    ) {
-      blockLeft.classList.add('block-out')
+    if (Math.abs(offsetTopLeft) > blockLeft.offsetHeight * 0.5) {
+      if (Math.floor(Math.abs(offsetLeft)) === 100)
+        blockLeft.classList.add('block-out')
     } else {
-      blockLeft.classList.remove('block-out')
+      if (
+        Math.floor(Math.abs(offsetLeft)) >
+        Math.abs(blockLeft.offsetWidth * 0.849)
+      )
+        blockLeft.classList.remove('block-out')
     }
 
     // Для правого блока
@@ -98,24 +100,26 @@ function Main() {
     let offsetTopRight = blockRight?.getBoundingClientRect().top
     let offsetRight = blockRight?.getBoundingClientRect().left
 
-    if (
-      (offsetTopRight < 0 && -offsetTopRight < blockRight.offsetHeight * 0.5) ||
-      (offsetTopRight > 0 && offsetTopRight < blockRight.offsetHeight * 0.5)
-    ) {
-      blockRight.classList.add('block-in-right')
+    if (Math.abs(offsetTopRight) < blockRight.offsetHeight * 0.5) {
+      if (
+        Math.floor(Math.abs(offsetRight)) >
+        Math.abs(blockRight.offsetWidth * 0.849)
+      )
+        blockRight.classList.add('block-in-right')
     } else {
-      blockRight.classList.remove('block-in-right')
+      if (Math.floor(Math.abs(offsetRight)) === 100)
+        blockRight.classList.remove('block-in-right')
     }
 
-    if (
-      (offsetTopRight < 0 && -offsetTopRight > blockRight.offsetHeight * 0.5) ||
-      (offsetTopRight > 0 &&
-        offsetTopRight > blockRight.offsetHeight * 0.5 &&
-        -offsetRight < blockRight.offsetWidth * 0.84)
-    ) {
-      blockRight.classList.add('block-out-right')
+    if (Math.abs(offsetTopRight) > blockRight.offsetHeight * 0.5) {
+      if (Math.floor(Math.abs(offsetRight)) === 100)
+        blockRight.classList.add('block-out-right')
     } else {
-      blockRight.classList.remove('block-out-right')
+      if (
+        Math.floor(Math.abs(offsetRight)) >
+        Math.abs(blockRight.offsetWidth * 0.849)
+      )
+        blockRight.classList.remove('block-out-right')
     }
   }
 
