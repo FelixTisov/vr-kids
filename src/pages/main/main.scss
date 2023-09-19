@@ -62,11 +62,12 @@
   max-width: 1386px;
   min-height: 478px;
   max-height: 478px;
+  width: 95%;
 }
 
 .start_content-left {
   @extend %cont-basic;
-  min-width: 653px;
+  min-width: 533px;
   max-width: 753px;
   min-height: inherit;
   max-height: inherit;
@@ -138,8 +139,8 @@
         @extend %cont-basic;
         align-items: flex-end;
         justify-content: space-between;
-        min-width: 82%;
-        max-width: 82%;
+        min-width: 630px;
+        max-width: 630px;
         min-height: 166px;
         max-height: 166px;
       }
