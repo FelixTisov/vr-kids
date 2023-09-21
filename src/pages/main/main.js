@@ -224,9 +224,9 @@ function Main() {
                 <div className="about_group_content_text">
                   <h3>VR Kids - это</h3>
                   <p>
-                    совершенно новый подход к образованию. Уникальная
+                    cовершенно новый подход к образованию. Уникальная
                     возможность погрузиться в виртуальный мир, полный новых
-                    открытий и удивительных историй.
+                    знаний и удивительных открытий.
                   </p>
                 </div>
               </div>
@@ -238,9 +238,10 @@ function Main() {
               <div className="about_group_content">
                 <div className="about_group_content_text about_group_content_text_second">
                   <p>
-                    совершенно новый подход к образованию. Уникальная
-                    возможность погрузиться в виртуальный мир, полный новых
-                    открытий и удивительных историй.
+                    Очки виртуальной реальности помогают закрепить пройденный
+                    материал и дают дополнительные знания. Делают сухую теорию
+                    более наглядной, понятной и интересной, тем самым увлекают
+                    учеников в процесс обучения.
                   </p>
                 </div>
                 <div className="about_group_content_image-container">
@@ -258,7 +259,7 @@ function Main() {
           <div className="example-video-wrapper">
             <div className="example-video-container_shadow">
               <p>
-                МНОЖЕССТВО ОБРАЗОВАТЕЛЬНЫХ
+                МНОЖЕСТВО ОБРАЗОВАТЕЛЬНЫХ
                 <br />
                 ФИЛЬМОВ ДЛЯ ВСЕХ ВОЗРАСТОВ
               </p>
@@ -302,9 +303,9 @@ function Main() {
               <div className="payment-methods_content_half">
                 <h3>ПРОСТО. БЫСТРО. УДОБНО.</h3>
                 <p>
-                  Выберите наиболее подходящий
+                  Выберите наиболее удобный
                   <br />
-                  вам метод оплаты.
+                  для вас способ оплаты.
                 </p>
                 <div className="payment-methods_content_half_conditions">
                   <p
