@@ -301,14 +301,16 @@ function Main() {
                 ></img>
               </div>
               <div className="payment-methods_content_half">
-                <h3>ПРОСТО. БЫСТРО. УДОБНО.</h3>
-                <p>
-                  Выберите наиболее удобный
+                <h3>
+                  Тут вы можете оплатить
                   <br />
-                  для вас способ оплаты.
-                </p>
+                  уже запланированный
+                  <br />
+                  сеанс!
+                </h3>
+                <p>Выберите подходящий способ оплаты</p>
                 <div className="payment-methods_content_half_conditions">
-                  <p
+                  {/* <p
                     onClick={handleOpenConditions}
                     className="payment-methods_content_half_conditions_underlined"
                   >
@@ -316,7 +318,7 @@ function Main() {
                   </p>
                   <p className="payment-methods_content_half_conditions_last-text">
                     предоставления услуг
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
