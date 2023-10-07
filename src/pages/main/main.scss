@@ -214,7 +214,7 @@
       .about_group_group-bg {
         @extend %cont-basic;
         position: absolute;
-        background-color: #4d9bf5;
+        background-color: #67a3e8;
         z-index: 1;
       }
 
@@ -372,6 +372,165 @@
     }
     100% {
       transform: translateX(85%);
+    }
+  }
+}
+
+.reviews {
+  @extend %cont-basic;
+  flex-direction: column;
+  min-width: 1024px;
+  max-width: 2560px;
+  min-height: 1065px;
+  max-height: 1065px;
+
+  .review_header {
+    @extend %cont-basic;
+    align-items: flex-end;
+    min-width: 1024px;
+    max-width: 2560px;
+    min-height: 210px;
+    max-height: 210px;
+    box-sizing: border-box;
+
+    h2 {
+      color: #000;
+      font-family: RifficFree;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 3.74px;
+    }
+  }
+
+  .review_content {
+    @extend %cont-basic;
+    min-width: 1024px;
+    max-width: 2560px;
+    min-height: 855px;
+    max-height: 855px;
+
+    .review_content-center {
+      @extend %cont-basic;
+      min-width: 1430px;
+      max-width: 1430px;
+      min-height: 855px;
+      max-height: 855px;
+
+      .review_content_review-container {
+        @extend %cont-basic;
+        flex-direction: column;
+        position: absolute;
+        min-width: 594px;
+        max-width: 594px;
+        min-height: 272px;
+        max-height: 272px;
+        border-radius: 49px;
+
+        .review_content_review-container_header {
+          @extend %cont-basic;
+          min-height: 70px;
+          max-height: 70px;
+          justify-content: flex-start;
+          padding-left: 20px;
+          box-sizing: border-box;
+        }
+
+        .review_content_review-container_body {
+          @extend %cont-basic;
+          min-height: 127px;
+          max-height: 127px;
+          justify-content: flex-start;
+          padding-left: 20px;
+          box-sizing: border-box;
+
+          p {
+            color: #fff;
+            text-align: justify;
+            font-family: ComicCAT;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 38px;
+            letter-spacing: 1.87px;
+          }
+        }
+
+        .review_content_review-container_bottom {
+          @extend %cont-basic;
+          min-height: 75px;
+          max-height: 75px;
+          justify-content: flex-start;
+          padding-left: 20px;
+          box-sizing: border-box;
+
+          color: #fff;
+          font-family: RifficFree;
+
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 2.21px;
+
+          h3 {
+            font-size: 26px;
+          }
+
+          h4 {
+            font-size: 22px;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .container-1 {
+        z-index: 2;
+        transform: rotate(-5.5deg);
+        background: #e8b189;
+        left: 20px;
+        top: 14%;
+      }
+
+      .container-2 {
+        z-index: 3;
+        transform: rotate(3deg);
+        background: #a7b364;
+        left: 160px;
+        top: 47%;
+      }
+
+      .container-3 {
+        z-index: 3;
+        transform: rotate(2deg);
+        background: #96bdc5;
+        right: 100px;
+        top: 12%;
+      }
+
+      .container-4 {
+        z-index: 2;
+        transform: rotate(-4deg);
+        background: #bd96c5;
+        right: 10px;
+        top: 43%;
+      }
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+        .container-1 {
+          left: 60px;
+          top: 14%;
+        }
+
+        .container-2 {
+          left: 140px;
+          top: 47%;
+        }
+
+        .container-4 {
+          right: 60px;
+          top: 43%;
+        }
+      }
     }
   }
 }
@@ -550,7 +709,7 @@
     max-width: 2560px;
     min-height: 1279px;
     max-height: 1279px;
-    background-color: #4d9bf5;
+    background-color: #67a3e8;
     border-radius: 49px 49px 49px 49px;
     z-index: 1;
   }

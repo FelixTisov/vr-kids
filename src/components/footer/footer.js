@@ -35,7 +35,7 @@ function Footer() {
                 link="https://vk.com/vrkids"
               />
               <ContactButtonShort
-                bgColor="#4d9bf5"
+                bgColor="#67A3E8"
                 iconUrl="icon_tg_short.svg"
                 alt="tg-icon"
                 link="https://t.me/vrkids"

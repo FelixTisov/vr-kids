@@ -189,7 +189,7 @@ function Main() {
                       link="https://vk.com/vrkids"
                     />
                     <ContactButton
-                      bgColor="#4d9bf5"
+                      bgColor="#67A3E8"
                       text="ТЕЛЕГРАМ"
                       iconUrl="icon_tg.svg"
                       alt="tg-icon"
@@ -252,6 +252,87 @@ function Main() {
                 </div>
               </div>
               <div className="about_group_group-bg about_group_group-bg_right"></div>
+            </div>
+          </div>
+        </div>
+        <div className="reviews">
+          <div className="review_header">
+            <h2>НАШИ ОТЗЫВЫ</h2>
+          </div>
+          <div className="review_content">
+            <div className="review_content-center">
+              <div className="review_content_review-container container-1">
+                <div className="review_content_review-container_header">
+                  <img src={require('../../icons/quotes.svg')}></img>
+                </div>
+                <div className="review_content_review-container_body">
+                  <p>
+                    VRKids - этонастоящая революция в <br /> образовании! Мой
+                    ребенок возвращается с <br /> занятий полон впечатлений и
+                    новых знаний!
+                  </p>
+                </div>
+                <div className="review_content_review-container_bottom">
+                  <h3>Иван Иванов, </h3>
+                  <h4>родитель</h4>
+                </div>
+              </div>
+
+              <div className="review_content_review-container container-2">
+                <div className="review_content_review-container_header">
+                  <img src={require('../../icons/quotes.svg')}></img>
+                </div>
+                <div className="review_content_review-container_body">
+                  <p>
+                    Школа виртуальной реальности улучшила
+                    <br />
+                    образование. Дети более заинтересованы и<br />
+                    учатся более интерактивно. Рекомендую!
+                  </p>
+                </div>
+                <div className="review_content_review-container_bottom">
+                  <h3>Любовь Смирнова, </h3>
+                  <h4>учитель школы № 4</h4>
+                </div>
+              </div>
+
+              <div className="review_content_review-container container-3">
+                <div className="review_content_review-container_header">
+                  <img src={require('../../icons/quotes.svg')}></img>
+                </div>
+                <div className="review_content_review-container_body">
+                  <p>
+                    Шлемы виртуальной реальности делают
+                    <br />
+                    учебу веселой! Я узнал много и провел
+                    <br />
+                    время с друзьями. Это классно!
+                  </p>
+                </div>
+                <div className="review_content_review-container_bottom">
+                  <h3>Дима Петров,</h3>
+                  <h4>ученик Лицея № 34</h4>
+                </div>
+              </div>
+
+              <div className="review_content_review-container container-4">
+                <div className="review_content_review-container_header">
+                  <img src={require('../../icons/quotes.svg')}></img>
+                </div>
+                <div className="review_content_review-container_body">
+                  <p>
+                    Я погрузилась в виртуальную реальность,
+                    <br />
+                    видела просторы космоса, звезды и планеты.
+                    <br />
+                    Спасибо за прекрасно проведённое время!
+                  </p>
+                </div>
+                <div className="review_content_review-container_bottom">
+                  <h3>Лена Соколова, </h3>
+                  <h4>ученица школы № 11</h4>
+                </div>
+              </div>
             </div>
           </div>
         </div>
