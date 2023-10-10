@@ -159,6 +159,17 @@ function Main() {
         outerStyle={{
           mixBlendMode: 'exclusion',
         }}
+        clickables={[
+          'a',
+          'select',
+          'button',
+          'input[type="submit"]',
+          '.header_button',
+          '.form-header_close',
+          '.payform-tinkoff_input',
+          '.participants_counter-button',
+          '.participants_counter-amount',
+        ]}
       />
 
       <div className="wrapper area">
