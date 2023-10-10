@@ -381,8 +381,8 @@
   flex-direction: column;
   min-width: 1024px;
   max-width: 2560px;
-  min-height: 1065px;
-  max-height: 1065px;
+  min-height: 1180px;
+  max-height: 1180px;
 
   .review_header {
     @extend %cont-basic;
@@ -407,20 +407,21 @@
     @extend %cont-basic;
     min-width: 1024px;
     max-width: 2560px;
-    min-height: 855px;
-    max-height: 855px;
+    min-height: 970px;
+    max-height: 970px;
 
     .review_content-center {
       @extend %cont-basic;
       min-width: 1430px;
       max-width: 1430px;
-      min-height: 855px;
-      max-height: 855px;
+      min-height: 970px;
+      max-height: 970px;
 
       .review_content_review-container {
         @extend %cont-basic;
         flex-direction: column;
         position: absolute;
+        justify-content: space-between;
         min-width: 594px;
         max-width: 594px;
         min-height: 272px;
@@ -429,11 +430,23 @@
 
         .review_content_review-container_header {
           @extend %cont-basic;
-          min-height: 70px;
-          max-height: 70px;
+          min-height: 68px;
+          max-height: 68px;
           justify-content: flex-start;
           padding-left: 20px;
           box-sizing: border-box;
+
+          h2 {
+            color: #fff;
+            font-family: RifficFree;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 2.04px;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            margin-left: 12px;
+          }
         }
 
         .review_content_review-container_body {
@@ -448,11 +461,14 @@
             color: #fff;
             text-align: justify;
             font-family: ComicCAT;
-            font-size: 22px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 400;
-            line-height: 38px;
-            letter-spacing: 1.87px;
+            letter-spacing: 0.6px;
+            line-height: 24px;
+
+            width: 96%;
+            height: fit-content;
           }
         }
 
@@ -464,55 +480,63 @@
           padding-left: 20px;
           box-sizing: border-box;
 
-          color: #fff;
-          font-family: RifficFree;
-
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-          letter-spacing: 2.21px;
-
           h3 {
-            font-size: 26px;
-          }
-
-          h4 {
-            font-size: 22px;
-            margin-left: 8px;
+            color: #fff;
+            font-family: RifficFree;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 1.7px;
+            margin-bottom: 35px;
           }
         }
       }
 
       .container-1 {
         z-index: 2;
-        transform: rotate(-5.5deg);
-        background: #e8b189;
-        left: 20px;
-        top: 14%;
+        transform: rotate(3deg);
+        background-image: url('../../images/review-1-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-width: 598.21px;
+        max-width: 598.21px;
+        min-height: 426.39px;
+        max-height: 426.39px;
+        left: 86px;
+        top: 8.5%;
       }
 
       .container-2 {
         z-index: 3;
-        transform: rotate(3deg);
-        background: #a7b364;
-        left: 160px;
-        top: 47%;
+        transform: rotate(-5deg);
+        background-image: url('../../images/review-2-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-width: 598.56px;
+        max-width: 598.56px;
+        min-height: 460.87px;
+        max-height: 460.87px;
+        right: 60px;
+        top: 7%;
       }
 
       .container-3 {
         z-index: 3;
-        transform: rotate(2deg);
-        background: #96bdc5;
-        right: 100px;
-        top: 12%;
-      }
+        transform: rotate(1deg);
+        background-image: url('../../images/review-3-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-width: 710px;
+        max-width: 710px;
+        min-height: 376.98px;
+        max-height: 376.98px;
 
-      .container-4 {
-        z-index: 2;
-        transform: rotate(-4deg);
-        background: #bd96c5;
-        right: 10px;
-        top: 43%;
+        left: 240px;
+        top: 60%;
       }
 
       @media only screen and (min-device-width: 320px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -661,7 +685,6 @@
         left: 0px;
         top: 40px;
         z-index: 1;
-        cursor: pointer;
 
         &:hover {
           top: 30px;
@@ -673,7 +696,6 @@
         left: 95px;
         top: 160px;
         z-index: 2;
-        cursor: pointer;
 
         &:hover {
           top: 150px;

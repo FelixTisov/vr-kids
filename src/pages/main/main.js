@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import AnimatedCursor from 'react-animated-cursor'
 import ContactButton from '../../components/contact-button/contact-button'
 import PayForm from '../../components/pay-form/pay-form'
 import Header from '../../components/header/header'
@@ -148,6 +149,18 @@ function Main() {
 
   return (
     <div className="body">
+      <AnimatedCursor
+        color="255, 255, 255"
+        innerSize={15}
+        outerSize={45}
+        innerScale={1}
+        outerScale={1.7}
+        outerAlpha={1}
+        outerStyle={{
+          mixBlendMode: 'exclusion',
+        }}
+      />
+
       <div className="wrapper area">
         <Header
           handleScrollToBlock={handleScrollToBlock}
@@ -264,73 +277,74 @@ function Main() {
               <div className="review_content_review-container container-1">
                 <div className="review_content_review-container_header">
                   <img src={require('../../icons/quotes.svg')}></img>
+                  <h2>Вязанкина Алевтина Витальевна</h2>
                 </div>
                 <div className="review_content_review-container_body">
                   <p>
-                    VRKids - этонастоящая революция в <br /> образовании! Мой
-                    ребенок возвращается с <br /> занятий полон впечатлений и
-                    новых знаний!
+                    Сегодня вечером погрузились в виртуальную реальность.
+                    Простоты космоса, невероятные виды, звезды и планеты.
+                    Наблюдали спутники планет, побывали среди колец
+                    Сатурна.Безумные взлёты и падения, невероятное путешествие
+                    по космосу. А после, вернулись на миллионы лет назад и
+                    подсмотрели жизнь доисторических динозавров. Всё это
+                    подарила ребятам команда ВИАРКИДС. Благодарим за прекрасно
+                    проведённое время.
                   </p>
                 </div>
                 <div className="review_content_review-container_bottom">
-                  <h3>Иван Иванов, </h3>
-                  <h4>родитель</h4>
+                  <h3>
+                    ГКУ КО «ЦЕНТР ПОМОЩИ ДЕТЯМ, <br />
+                    ОСТАВШИМСЯ БЕЗ ПОПЕЧЕНИЯ РОДИТЕЛЕЙ»
+                  </h3>
                 </div>
               </div>
 
               <div className="review_content_review-container container-2">
                 <div className="review_content_review-container_header">
                   <img src={require('../../icons/quotes.svg')}></img>
+                  <h2>Усикова Нина Алексеевна</h2>
                 </div>
                 <div className="review_content_review-container_body">
                   <p>
-                    Школа виртуальной реальности улучшила
-                    <br />
-                    образование. Дети более заинтересованы и<br />
-                    учатся более интерактивно. Рекомендую!
+                    воспитанники центра побывали в незабываемом познавательном
+                    путешествии, благодаря команде VRKIDS. Дети в увлекательной
+                    форме с очками виртуальной реальности окунулись в эпоху
+                    динозавров, узнали о них много нового и интересного,
+                    смотрели фильм о космосе, пополнили свои знания о Солнечной
+                    системе, наблюдали за спутниками разных планет И побывали
+                    среди колец Сатурна. Делясь впечатлениями, они отметили, что
+                    реально ощущали полёт в космическом пространстве. Мы
+                    благодарим Никиту и Дениса за яркие эмоции, новые
+                    впечатления и ждём в гости!
                   </p>
                 </div>
                 <div className="review_content_review-container_bottom">
-                  <h3>Любовь Смирнова, </h3>
-                  <h4>учитель школы № 4</h4>
+                  <h3>ГКУ КО «ВОЛЖСКИЙ ЦЕНТР ПОМОЩИ ДЕТЯМ»</h3>
                 </div>
               </div>
 
               <div className="review_content_review-container container-3">
                 <div className="review_content_review-container_header">
                   <img src={require('../../icons/quotes.svg')}></img>
+                  <h2>Вязанкина Алевтина Витальевна</h2>
                 </div>
                 <div className="review_content_review-container_body">
                   <p>
-                    Шлемы виртуальной реальности делают
-                    <br />
-                    учебу веселой! Я узнал много и провел
-                    <br />
-                    время с друзьями. Это классно!
+                    Сегодня вечером погрузились в виртуальную реальность.
+                    Простоты космоса, невероятные виды, звезды и планеты.
+                    Наблюдали спутники планет, побывали среди колец
+                    Сатурна.Безумные взлёты и падения, невероятное путешествие
+                    по космосу. А после, вернулись на миллионы лет назад и
+                    подсмотрели жизнь доисторических динозавров. Всё это
+                    подарила ребятам команда ВИАРКИДС. Благодарим за прекрасно
+                    проведённое время.
                   </p>
                 </div>
                 <div className="review_content_review-container_bottom">
-                  <h3>Дима Петров,</h3>
-                  <h4>ученик Лицея № 34</h4>
-                </div>
-              </div>
-
-              <div className="review_content_review-container container-4">
-                <div className="review_content_review-container_header">
-                  <img src={require('../../icons/quotes.svg')}></img>
-                </div>
-                <div className="review_content_review-container_body">
-                  <p>
-                    Я погрузилась в виртуальную реальность,
-                    <br />
-                    видела просторы космоса, звезды и планеты.
-                    <br />
-                    Спасибо за прекрасно проведённое время!
-                  </p>
-                </div>
-                <div className="review_content_review-container_bottom">
-                  <h3>Лена Соколова, </h3>
-                  <h4>ученица школы № 11</h4>
+                  <h3>
+                    ГКУ КО «ЦЕНТР ПОМОЩИ ДЕТЯМ, <br />
+                    ОСТАВШИМСЯ БЕЗ ПОПЕЧЕНИЯ РОДИТЕЛЕЙ»
+                  </h3>
                 </div>
               </div>
             </div>
