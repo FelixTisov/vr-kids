@@ -169,6 +169,8 @@ function Main() {
           '.payform-tinkoff_input',
           '.participants_counter-button',
           '.participants_counter-amount',
+          '.pushkin-card',
+          '.bank-card',
         ]}
       />
 

@@ -122,16 +122,18 @@
   .about {
     min-width: 320px;
     max-width: 640px;
-    min-height: 1334px;
-    max-height: 2500px;
     margin: 0;
     padding: 0;
+    height: 205vh;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     .about_section {
       margin: 0;
       padding: 0;
-
+      height: 50%;
+      overflow-y: hidden;
+      overflow-x: hidden;
       .about_group {
         @extend %cont-basic;
         align-items: flex-start;
@@ -154,7 +156,7 @@
 
         .about_group_group-bg_right {
           right: 0;
-          margin-top: 12px;
+          margin-top: 46px;
           margin-right: -5%;
         }
 
@@ -170,6 +172,8 @@
 
             .about_group_content_image-container_image-second {
               height: 135%;
+              position: absolute;
+              top: -68px;
             }
           }
 
