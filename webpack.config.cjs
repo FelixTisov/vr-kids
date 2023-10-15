@@ -49,12 +49,12 @@ const config = {
       },
       // Images
       {
-        test: /\.(svg|png)$/i,
+        test: /\.(svg|png|jpg)$/i,
         type: 'asset/resource',
       },
       // Videos
       {
-        test: /\.(mp4)$/i,
+        test: /\.(mp4|mov)$/i,
         type: 'asset/resource',
       },
       // HTML

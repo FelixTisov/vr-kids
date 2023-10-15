@@ -376,6 +376,128 @@
   }
 }
 
+.carousel-main-container {
+  @extend %cont-basic;
+  min-width: 1024px;
+  max-width: 2560px;
+  min-height: 467px;
+  height: 30vh;
+  max-height: 600px;
+
+  // .carousel-group-container {
+  //   @extend %cont-basic;
+  //   justify-content: flex-start;
+  //   min-width: inherit;
+  //   max-width: inherit;
+  //   min-height: inherit;
+  //   height: inherit;
+  //   max-height: inherit;
+  //   overflow-x: hidden;
+  //   overflow-y: hidden;
+
+  #yellow {
+    background-color: yellow;
+  }
+
+  #blue {
+    background-color: blue;
+  }
+
+  #purple {
+    background-color: purple;
+  }
+
+  .carousel-group {
+    @extend %cont-basic;
+    min-height: inherit;
+    height: inherit;
+    max-height: inherit;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    .video-box-wrapper {
+      @extend %cont-basic;
+      min-width: 50%;
+      max-width: 50%;
+
+      .video-box {
+        @extend %cont-basic;
+        min-width: inherit;
+        max-width: inherit;
+
+        .slider-video {
+          min-height: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .image-box {
+      min-width: 25%;
+      max-width: 25%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #box1 {
+      background-image: url('../../images/carousel/1.jpg');
+      min-width: 33%;
+      max-width: 33%;
+    }
+
+    #box2 {
+      background-image: url('../../images/carousel/2.jpg');
+      min-width: 34%;
+      max-width: 34%;
+    }
+
+    #box3 {
+      background-image: url('../../images/carousel/3.jpg');
+      min-width: 33%;
+      max-width: 33%;
+    }
+
+    #box4 {
+      background-image: url('../../images/carousel/4.jpg');
+    }
+
+    #box5 {
+      background-image: url('../../images/carousel/5.jpg');
+    }
+
+    #box6 {
+      background-image: url('../../images/carousel/6.jpg');
+      min-width: 33%;
+      max-width: 33%;
+    }
+
+    #box7 {
+      background-image: url('../../images/carousel/7.jpg');
+      min-width: 34%;
+      max-width: 34%;
+    }
+
+    #box8 {
+      background-image: url('../../images/carousel/8.jpg');
+      min-width: 33%;
+      max-width: 33%;
+    }
+
+    #box9 {
+      background-image: url('../../images/carousel/9.jpg');
+    }
+
+    #box10 {
+      background-image: url('../../images/carousel/10.jpg');
+    }
+  }
+  // }
+}
+
 .reviews {
   @extend %cont-basic;
   flex-direction: column;
