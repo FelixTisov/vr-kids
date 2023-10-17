@@ -172,6 +172,7 @@ function Main() {
           '.participants_counter-amount',
           '.pushkin-card',
           '.bank-card',
+          '.arrow',
         ]}
       />
 
@@ -339,82 +340,84 @@ function Main() {
             </div>
           </Carousel>
         </div>
-        <div className="reviews">
-          <div className="review_header">
-            <h2>НАШИ ОТЗЫВЫ</h2>
-          </div>
-          <div className="review_content">
-            <div className="review_content-center">
-              <div className="review_content_review-container container-1">
-                <div className="review_content_review-container_header">
-                  <img src={require('../../icons/quotes.svg')}></img>
-                  <h2>Вязанкина Алевтина Витальевна</h2>
+        <div className="reviews-container">
+          <div className="reviews">
+            <div className="review_header">
+              <h2>НАШИ ОТЗЫВЫ</h2>
+            </div>
+            <div className="review_content">
+              <div className="review_content-center">
+                <div className="review_content_review-container container-1">
+                  <div className="review_content_review-container_header">
+                    <img src={require('../../icons/quotes.svg')}></img>
+                    <h2>Вязанкина Алевтина Витальевна</h2>
+                  </div>
+                  <div className="review_content_review-container_body">
+                    <p>
+                      Сегодня вечером погрузились в виртуальную реальность.
+                      Простоты космоса, невероятные виды, звезды и планеты.
+                      Наблюдали спутники планет, побывали среди колец
+                      Сатурна.Безумные взлёты и падения, невероятное путешествие
+                      по космосу. А после, вернулись на миллионы лет назад и
+                      подсмотрели жизнь доисторических динозавров. Всё это
+                      подарила ребятам команда ВИАРКИДС. Благодарим за прекрасно
+                      проведённое время.
+                    </p>
+                  </div>
+                  <div className="review_content_review-container_bottom">
+                    <h3>
+                      ГКУ КО «ЦЕНТР ПОМОЩИ ДЕТЯМ, <br />
+                      ОСТАВШИМСЯ БЕЗ ПОПЕЧЕНИЯ РОДИТЕЛЕЙ»
+                    </h3>
+                  </div>
                 </div>
-                <div className="review_content_review-container_body">
-                  <p>
-                    Сегодня вечером погрузились в виртуальную реальность.
-                    Простоты космоса, невероятные виды, звезды и планеты.
-                    Наблюдали спутники планет, побывали среди колец
-                    Сатурна.Безумные взлёты и падения, невероятное путешествие
-                    по космосу. А после, вернулись на миллионы лет назад и
-                    подсмотрели жизнь доисторических динозавров. Всё это
-                    подарила ребятам команда ВИАРКИДС. Благодарим за прекрасно
-                    проведённое время.
-                  </p>
-                </div>
-                <div className="review_content_review-container_bottom">
-                  <h3>
-                    ГКУ КО «ЦЕНТР ПОМОЩИ ДЕТЯМ, <br />
-                    ОСТАВШИМСЯ БЕЗ ПОПЕЧЕНИЯ РОДИТЕЛЕЙ»
-                  </h3>
-                </div>
-              </div>
 
-              <div className="review_content_review-container container-2">
-                <div className="review_content_review-container_header">
-                  <img src={require('../../icons/quotes.svg')}></img>
-                  <h2>Усикова Нина Алексеевна</h2>
+                <div className="review_content_review-container container-2">
+                  <div className="review_content_review-container_header">
+                    <img src={require('../../icons/quotes.svg')}></img>
+                    <h2>Усикова Нина Алексеевна</h2>
+                  </div>
+                  <div className="review_content_review-container_body">
+                    <p>
+                      воспитанники центра побывали в незабываемом познавательном
+                      путешествии, благодаря команде VRKIDS. Дети в
+                      увлекательной форме с очками виртуальной реальности
+                      окунулись в эпоху динозавров, узнали о них много нового и
+                      интересного, смотрели фильм о космосе, пополнили свои
+                      знания о Солнечной системе, наблюдали за спутниками разных
+                      планет И побывали среди колец Сатурна. Делясь
+                      впечатлениями, они отметили, что реально ощущали полёт в
+                      космическом пространстве. Мы благодарим Никиту и Дениса за
+                      яркие эмоции, новые впечатления и ждём в гости!
+                    </p>
+                  </div>
+                  <div className="review_content_review-container_bottom">
+                    <h3>ГКУ КО «ВОЛЖСКИЙ ЦЕНТР ПОМОЩИ ДЕТЯМ»</h3>
+                  </div>
                 </div>
-                <div className="review_content_review-container_body">
-                  <p>
-                    воспитанники центра побывали в незабываемом познавательном
-                    путешествии, благодаря команде VRKIDS. Дети в увлекательной
-                    форме с очками виртуальной реальности окунулись в эпоху
-                    динозавров, узнали о них много нового и интересного,
-                    смотрели фильм о космосе, пополнили свои знания о Солнечной
-                    системе, наблюдали за спутниками разных планет И побывали
-                    среди колец Сатурна. Делясь впечатлениями, они отметили, что
-                    реально ощущали полёт в космическом пространстве. Мы
-                    благодарим Никиту и Дениса за яркие эмоции, новые
-                    впечатления и ждём в гости!
-                  </p>
-                </div>
-                <div className="review_content_review-container_bottom">
-                  <h3>ГКУ КО «ВОЛЖСКИЙ ЦЕНТР ПОМОЩИ ДЕТЯМ»</h3>
-                </div>
-              </div>
 
-              <div className="review_content_review-container container-3">
-                <div className="review_content_review-container_header">
-                  <img src={require('../../icons/quotes.svg')}></img>
-                  <h2>Бирюкова Ольга Владимировна</h2>
-                </div>
-                <div className="review_content_review-container_body">
-                  <p>
-                    В октябре наша школа принимала у себя в гостях компанию
-                    VRKIDS. Это новое для многих ребят времяпровождение с
-                    погружением в виртуальную реальность. Компания предоставляет
-                    возможность просмотреть познавательные фильмы, исходя из
-                    возрастных особенностей детей. Дети заинтересованы, форма
-                    подачи материала позволяет легче его усвоить. И обучение, и
-                    развлечение, в равных пропорциях. Дети получили приятные
-                    бонусы, сок и значок. Хочется порекомендовать для
-                    сотрудничества данную компанию, пожелать VRKIDS успехов и
-                    дальнейшего развития!
-                  </p>
-                </div>
-                <div className="review_content_review-container_bottom">
-                  <h3>МБОУ СОШ №7, г. Шарья</h3>
+                <div className="review_content_review-container container-3">
+                  <div className="review_content_review-container_header">
+                    <img src={require('../../icons/quotes.svg')}></img>
+                    <h2>Бирюкова Ольга Владимировна</h2>
+                  </div>
+                  <div className="review_content_review-container_body">
+                    <p>
+                      В октябре наша школа принимала у себя в гостях компанию
+                      VRKIDS. Это новое для многих ребят времяпровождение с
+                      погружением в виртуальную реальность. Компания
+                      предоставляет возможность просмотреть познавательные
+                      фильмы, исходя из возрастных особенностей детей. Дети
+                      заинтересованы, форма подачи материала позволяет легче его
+                      усвоить. И обучение, и развлечение, в равных пропорциях.
+                      Дети получили приятные бонусы, сок и значок. Хочется
+                      порекомендовать для сотрудничества данную компанию,
+                      пожелать VRKIDS успехов и дальнейшего развития!
+                    </p>
+                  </div>
+                  <div className="review_content_review-container_bottom">
+                    <h3>МБОУ СОШ №7, г. Шарья</h3>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import './carousel.scss'
 
 function Carousel({ children }) {
@@ -60,7 +61,7 @@ function Carousel({ children }) {
       <div className="carousel">
         {/* Стрелка влево */}
         <div className="arrow-cont arrow-cont-left">
-          <span className="arrow" onClick={handleLeft} />
+          <FaChevronLeft className="arrow" onClick={handleLeft} />
         </div>
 
         {/* Все слайды */}
@@ -77,7 +78,7 @@ function Carousel({ children }) {
 
         {/* Стрелка вправо */}
         <div className="arrow-cont arrow-cont-right">
-          <span className="arrow" onClick={handleRight} />
+          <FaChevronRight className="arrow" onClick={handleRight} />
         </div>
       </div>
 
