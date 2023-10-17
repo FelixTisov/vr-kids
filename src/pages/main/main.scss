@@ -380,9 +380,10 @@
   @extend %cont-basic;
   min-width: 1024px;
   max-width: 2560px;
-  min-height: 467px;
-  height: 30vh;
+  min-height: 647px;
+  height: 35vh;
   max-height: 600px;
+  align-items: flex-end;
 
   // .carousel-group-container {
   //   @extend %cont-basic;

@@ -1,20 +1,20 @@
 @function randomSize() {
-  $sizes: 30, 40, 50, 60, 70, 80, 90, 100, 120, 150;
-  $nth: nth($sizes, random(9));
+  $sizes: 30, 40, 50, 60, 70, 80, 90, 100, 120, 150, 200, 300;
+  $nth: nth($sizes, random(12));
 
   @return $nth;
 }
 
 @function randomDelay() {
   $rand: random();
-  $randomNum: 0 + floor($rand * ((5 - 0) + 1));
+  $randomNum: 0 + floor($rand * ((2 - 0) + 1));
 
   @return $randomNum;
 }
 
 @function randomDuration() {
-  $amounts: 15, 20, 25, 30, 35, 40, 45, 50;
-  $nth: nth($amounts, random(7));
+  $amounts: 10, 20, 25, 30, 35, 40, 45;
+  $nth: nth($amounts, random(6));
 
   @return $nth;
 }
@@ -29,23 +29,15 @@
   }
 }
 
-.circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
 .circles li {
   position: absolute;
   display: block;
   list-style: none;
   background: rgba(189, 150, 197, 0.32);
-  animation: animate 25s linear infinite;
-  bottom: 1659px;
+  animation-name: animate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  top: 2000px;
   border-radius: 15px;
 }
 
@@ -55,7 +47,6 @@
 
 .circles li:nth-child(2) {
   left: 10%;
-  animation-duration: 12s;
 }
 
 .circles li:nth-child(3) {
@@ -64,7 +55,6 @@
 
 .circles li:nth-child(4) {
   left: 40%;
-  animation-duration: 18s;
 }
 
 .circles li:nth-child(5) {
@@ -81,42 +71,34 @@
 
 .circles li:nth-child(8) {
   left: 50%;
-  animation-duration: 45s;
 }
 
 .circles li:nth-child(9) {
   left: 20%;
-  animation-duration: 35s;
 }
 
 .circles li:nth-child(10) {
   left: 85%;
-  animation-duration: 25s;
 }
 
 .circles li:nth-child(11) {
   left: 65%;
-  animation-duration: 50s;
 }
 
 .circles li:nth-child(12) {
   left: 20%;
-  animation-duration: 50s;
 }
 
 .circles li:nth-child(13) {
   left: 40%;
-  animation-duration: 45s;
 }
 
 .circles li:nth-child(14) {
   left: 90%;
-  animation-duration: 40s;
 }
 
 .circles li:nth-child(15) {
   left: 50%;
-  animation-duration: 30s;
 }
 
 @keyframes animate {
@@ -126,20 +108,23 @@
     border-radius: 10%;
   }
   100% {
-    transform: translateY(-3600%) rotate(720deg);
+    transform: translateY(-2200px) rotate(720deg);
     opacity: 1;
     border-radius: 50%;
   }
 }
 
-.circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
+@keyframes animate2 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 10%;
+  }
+  100% {
+    transform: translateY(-4600px) rotate(720deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
 }
 
 .start-circles li {
@@ -147,8 +132,10 @@
   display: block;
   list-style: none;
   background: rgba(189, 150, 197, 0.32);
-  animation: animate 25s linear forwards;
-  bottom: 3159px;
+  animation-name: animate2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  top: 4350px;
   border-radius: 15px;
 }
 
@@ -158,7 +145,6 @@
 
 .start-circles li:nth-child(2) {
   left: 10%;
-  animation-duration: 12s;
 }
 
 .start-circles li:nth-child(3) {
@@ -167,7 +153,6 @@
 
 .start-circles li:nth-child(4) {
   left: 40%;
-  animation-duration: 18s;
 }
 
 .start-circles li:nth-child(5) {
@@ -184,40 +169,32 @@
 
 .start-circles li:nth-child(8) {
   left: 50%;
-  animation-duration: 45s;
 }
 
 .start-circles li:nth-child(9) {
   left: 20%;
-  animation-duration: 35s;
 }
 
 .start-circles li:nth-child(10) {
   left: 85%;
-  animation-duration: 25s;
 }
 
 .start-circles li:nth-child(11) {
   left: 65%;
-  animation-duration: 50s;
 }
 
 .start-circles li:nth-child(12) {
   left: 20%;
-  animation-duration: 50s;
 }
 
 .start-circles li:nth-child(13) {
   left: 40%;
-  animation-duration: 45s;
 }
 
 .start-circles li:nth-child(14) {
   left: 90%;
-  animation-duration: 40s;
 }
 
 .start-circles li:nth-child(15) {
   left: 50%;
-  animation-duration: 30s;
 }
