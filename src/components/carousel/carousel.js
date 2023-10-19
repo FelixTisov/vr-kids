@@ -1,60 +1,70 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import './carousel.scss'
 
 function Carousel({ children }) {
-  const [currentGroup, setCurrentGroup] = useState()
-  const [currentIndexes, setCurrentIndexes] = useState([0, 1, 2])
+  const [currentChildren, setChildren] = useState(children)
+  const [offset, setOffset] = useState(0)
+  const allItemsCont = useRef()
+  const [sliderLength, setSliderLength] = useState(children.length)
 
   useEffect(() => {
-    setCurrentGroup([
-      children[currentIndexes[0]],
-      children[currentIndexes[1]],
-      children[currentIndexes[2]],
-    ])
-  }, [currentIndexes])
+    const offsetMax = sliderLength
 
-  // Нажатие влево
-  const handleLeft = () => {
-    let allItemsCont = document.querySelector('.all-items-cont')
-    allItemsCont.classList.add('move-left')
-    setTimeout(() => {
-      let newIndexLeft = currentIndexes[0] - 1
-      if (newIndexLeft < 0) newIndexLeft = children.length - 1
+    allItemsCont.current.style.transition = 'translate'
+    allItemsCont.current.style.transitionProperty = 'transform'
+    allItemsCont.current.style.transitionDuration = '800ms'
 
-      let newIndexMiddle = currentIndexes[1] - 1
-      if (newIndexMiddle < 0) newIndexMiddle = children.length - 1
+    // Если индекс меньше длины массива
+    if (offset < offsetMax) {
+      // Если индекс положительный
+      if (offset > 0) {
+        // тогда просто сдивагем вправо или влево
+        allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
+      }
+      // Если индекс отрицательный
+      else {
+        // если индекс = -1
+        if (offset === -1) {
+          allItemsCont.current.style.transition = 'none'
+          allItemsCont.current.style.transitionProperty = 'none'
+          allItemsCont.current.style.transitionDuration = '0ms'
 
-      let newIndexRight = currentIndexes[2] - 1
-      if (newIndexRight < 0) newIndexRight = children.length - 1
+          setChildren((child) => [...child, children])
 
-      setCurrentIndexes([newIndexLeft, newIndexMiddle, newIndexRight])
+          allItemsCont.current.style.transform = `translateX(${
+            -(sliderLength + 1) * 100
+          }%)`
 
-      allItemsCont.classList.remove('move-left')
-    }, 800)
-  }
+          allItemsCont.current.style.transform = `translateX(${
+            -(-1 + (sliderLength + 1)) * 100
+          }%)`
+
+          setOffset((current) => {
+            return current + (children.length + 1)
+          })
+        } else
+          allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
+      }
+    } else {
+      setChildren((child) => [...child, children])
+      allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
+    }
+  }, [offset])
 
   // Нажатие вправо
   const handleRight = () => {
-    let allItemsCont = document.querySelector('.all-items-cont')
-    allItemsCont.classList.add('move-right')
-    setTimeout(() => {
-      let newIndexLeft = currentIndexes[0] + 1
-      if (newIndexLeft > children.length - 1) newIndexLeft = 0
-
-      let newIndexMiddle = currentIndexes[1] + 1
-      if (newIndexMiddle > children.length - 1) newIndexMiddle = 0
-
-      let newIndexRight = currentIndexes[2] + 1
-      if (newIndexRight > children.length - 1) newIndexRight = 0
-
-      setCurrentIndexes([newIndexLeft, newIndexMiddle, newIndexRight])
-
-      allItemsCont.classList.remove('move-right')
-    }, 800)
+    setOffset((offset) => {
+      return offset + 1
+    })
   }
 
-  console.log(children)
+  // Нажатие влево
+  const handleLeft = () => {
+    setOffset((offset) => {
+      return offset - 1
+    })
+  }
 
   return (
     <div className="main-cont">
@@ -66,13 +76,8 @@ function Carousel({ children }) {
 
         {/* Все слайды */}
         <div className="window">
-          <div
-            className="all-items-cont"
-            // style={{
-            //   transform: `translateX(${offset * 100}%)`,
-            // }}
-          >
-            {currentGroup}
+          <div ref={allItemsCont} className="all-items-cont">
+            {currentChildren}
           </div>
         </div>
 
@@ -81,11 +86,6 @@ function Carousel({ children }) {
           <FaChevronRight className="arrow" onClick={handleRight} />
         </div>
       </div>
-
-      {/* Указатели слайда */}
-      {/* <div className="circles-cont">
-        {currentIndexes[1] + 1} / {children.length}
-      </div> */}
     </div>
   )
 }

@@ -385,17 +385,17 @@
   max-height: 600px;
   align-items: flex-end;
 
-  #yellow {
-    background-color: yellow;
-  }
+  // #yellow {
+  //   background-color: yellow;
+  // }
 
-  #blue {
-    background-color: blue;
-  }
+  // #blue {
+  //   background-color: blue;
+  // }
 
-  #purple {
-    background-color: purple;
-  }
+  // #purple {
+  //   background-color: purple;
+  // }
 
   .carousel-group {
     @extend %cont-basic;
@@ -406,7 +406,7 @@
     height: 100%;
     min-width: 100%;
     max-width: 100%;
-    background-color: pink;
+    // background-color: pink;
 
     .video-box-wrapper {
       @extend %cont-basic;

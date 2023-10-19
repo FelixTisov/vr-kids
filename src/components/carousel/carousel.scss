@@ -27,19 +27,16 @@
   justify-content: flex-start;
   width: inherit;
   height: inherit;
-  // overflow-x: scroll;
-
-  transform: translateX(-100%);
 
   // transition: translate;
   // transition-property: transform;
   // transition-duration: 800ms;
-  // transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .move-left {
-  animation: slide-left 800ms both;
-  -webkit-animation: slide-left 800ms both;
+  animation: slide-left 800ms none;
+  -webkit-animation: slide-left 800ms none;
 }
 
 @-webkit-keyframes slide-left {
@@ -54,8 +51,8 @@
 }
 
 .move-right {
-  animation: slide-right 800ms both;
-  -webkit-animation: slide-right 800ms both;
+  animation: slide-right 800ms none;
+  -webkit-animation: slide-right 800ms none;
 }
 
 @-webkit-keyframes slide-right {
