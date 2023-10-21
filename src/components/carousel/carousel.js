@@ -33,15 +33,13 @@ function Carousel({ children }) {
           setChildren((child) => [...child, children])
 
           allItemsCont.current.style.transform = `translateX(${
-            -(sliderLength + 1) * 100
-          }%)`
-
-          allItemsCont.current.style.transform = `translateX(${
             -(-1 + (sliderLength + 1)) * 100
           }%)`
 
           setOffset((current) => {
-            return current + (children.length + 1)
+            let newOffset = current + children.length
+
+            return newOffset
           })
         } else
           allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
