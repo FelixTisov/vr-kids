@@ -280,8 +280,107 @@
     }
   }
 
-  .reviews {
-    display: none;
+  .reviews-container {
+    min-width: 100%;
+    max-width: 100%;
+    .reviews {
+      min-width: 100%;
+      max-width: 100%;
+      .review_header {
+        min-height: 150px;
+        max-height: 150px;
+        h2 {
+          font-size: 26px;
+          margin-bottom: 40px;
+        }
+      }
+
+      .review_content {
+        min-width: 100%;
+        max-width: 100%;
+
+        .review_content-center {
+          min-width: 100%;
+          max-width: 100%;
+
+          .review_content_review-container {
+            min-width: 312px;
+            max-width: 312px;
+            min-height: 401px;
+            max-height: 401px;
+
+            .review_content_review-container_header {
+              padding-left: 20px;
+              min-height: 70px;
+              max-height: 70px;
+
+              h2 {
+                font-size: 19px;
+                margin-left: 12px;
+                text-underline-offset: 4px;
+              }
+            }
+
+            .review_content_review-container_body {
+              min-height: 260px;
+              max-height: 260px;
+              padding-left: 20px;
+
+              p {
+                font-size: 17px;
+                line-height: 17px;
+              }
+            }
+
+            .review_content_review-container_bottom {
+              min-height: 70px;
+              max-height: 70px;
+              padding-left: 20px;
+              justify-content: center;
+
+              h3 {
+                font-size: 14px;
+                margin-bottom: 24px;
+              }
+            }
+          }
+
+          .container-1 {
+            transform: rotate(3deg);
+            background-image: url('../../images/review-1-bg_mobile.png');
+            min-width: 350px;
+            max-width: 350px;
+            min-height: 401px;
+            max-height: 401px;
+            left: 12px;
+            top: 40px;
+          }
+
+          .container-2 {
+            transform: rotate(-3deg);
+            background-image: url('../../images/review-2-bg_mobile.png');
+            min-width: 350px;
+            max-width: 350px;
+            min-height: 449px;
+            max-height: 449px;
+            right: 12px;
+            top: 500px;
+          }
+
+          .container-3 {
+            display: none;
+            transform: rotate(1deg);
+            min-width: 710px;
+            max-width: 710px;
+            min-height: 376.98px;
+            max-height: 376.98px;
+
+            left: 240px;
+            bottom: 10px;
+          }
+        }
+      }
+    }
   }
 
   .payment {
