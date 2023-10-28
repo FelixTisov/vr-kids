@@ -456,35 +456,51 @@
           align-items: center;
         }
 
-        .pushkin-card {
-          left: 10%;
-          top: 380px;
-          width: 263px;
-          height: 169px;
+        // .pushkin-card {
+        //   left: 10%;
+        //   top: 380px;
+        //   width: 263px;
+        //   height: 169px;
 
-          &:hover {
-            top: 0;
-          }
-        }
+        //   &:hover {
+        //     top: 380px;
+        //   }
+        // }
 
         .bank-card {
-          left: 21%;
+          left: 12%;
           top: 500px;
           width: 280px;
           height: 180px;
 
           &:hover {
-            top: 0px;
+            top: 500px;
           }
           &:active {
             pointer-events: none;
           }
         }
 
+        // .bank-card {
+        //   left: 21%;
+        //   top: 500px;
+        //   width: 280px;
+        //   height: 180px;
+
+        //   &:hover {
+        //     top: 500px;
+        //   }
+        //   &:active {
+        //     pointer-events: none;
+        //   }
+        // }
+
         h3 {
           font-size: 28px;
           line-height: 45px;
-          margin: 28px 0 0 70px;
+          margin-top: 28px;
+          margin-left: 10px;
+          // margin: 28px 0 0 70px;
         }
         p {
           font-size: 24px;

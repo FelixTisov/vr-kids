@@ -449,17 +449,17 @@ function Main() {
           </div>
           <div ref={payment} className="payment-methods">
             <div className="payment-methods_title">
-              <h2>ВАРИАНТЫ ОПЛАТЫ</h2>
+              <h2>ОПЛАТА ОНЛАЙН</h2>
             </div>
             <div className="payment-methods_content">
               <div className="payment-methods_content_half">
-                <img
+                {/* <img
                   className="pushkin-card"
                   src={require('../../images/pushkin-card.png')}
                   alt="pushkinskaia karta"
                   onClick={handleOpenErrorWindow}
                   onTouchEnd={handleOpenErrorWindow}
-                ></img>
+                ></img> */}
                 <img
                   className="bank-card"
                   src={require('../../images/bank-card.png')}
@@ -476,7 +476,7 @@ function Main() {
                   <br />
                   сеанс!
                 </h3>
-                <p>Выберите подходящий способ оплаты</p>
+                {/* <p>Выберите подходящий способ оплаты</p> */}
                 <div className="payment-methods_content_half_conditions">
                   {/* <p
                     onClick={handleOpenConditions}

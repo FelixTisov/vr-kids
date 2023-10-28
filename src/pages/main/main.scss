@@ -784,27 +784,38 @@
         }
       }
 
-      .pushkin-card {
-        position: absolute;
-        left: 0px;
-        top: 40px;
-        z-index: 1;
+      // .pushkin-card {
+      //   position: absolute;
+      //   left: 0px;
+      //   top: 40px;
+      //   z-index: 1;
 
-        &:hover {
-          top: 30px;
-        }
-      }
+      //   &:hover {
+      //     top: 30px;
+      //   }
+      // }
 
       .bank-card {
         position: absolute;
         left: 95px;
-        top: 160px;
+        top: 20px;
         z-index: 2;
 
         &:hover {
-          top: 150px;
+          top: 0px;
         }
       }
+
+      // .bank-card {
+      //   position: absolute;
+      //   left: 95px;
+      //   top: 160px;
+      //   z-index: 2;
+
+      //   &:hover {
+      //     top: 150px;
+      //   }
+      // }
 
       h3 {
         color: #fff;
