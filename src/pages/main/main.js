@@ -284,61 +284,136 @@ function Main() {
           </div>
         </div>
         <div className="carousel-main-container">
-          <Carousel>
-            <div className="carousel-group">
-              <div className="image-box" id="box1" />
-              <div className="image-box" id="box2" />
-              <div className="image-box" id="box3" />
-            </div>
+          <div className="desktop-carousel">
+            <Carousel>
+              <div className="carousel-group">
+                <div className="image-box" id="box1" />
+                <div className="image-box" id="box2" />
+                <div className="image-box" id="box3" />
+              </div>
 
-            <div className="carousel-group">
-              <div className="image-box" id="box4" />
-              <div className="video-box-wrapper">
-                <div className="video-box">
-                  <video
-                    className="slider-video"
-                    autoPlay={true}
-                    muted
-                    loop
-                    playsInline={true}
-                  >
-                    <source
-                      type="video/mp4"
-                      src={require('../../videos/carousel/1.mp4')}
-                    ></source>
-                  </video>
+              <div className="carousel-group">
+                <div className="image-box" id="box4" />
+                <div className="video-box-wrapper">
+                  <div className="video-box">
+                    <video
+                      className="slider-video"
+                      autoPlay={true}
+                      muted
+                      loop
+                      playsInline={true}
+                    >
+                      <source
+                        type="video/mp4"
+                        src={require('../../videos/carousel/1.mp4')}
+                      ></source>
+                    </video>
+                  </div>
+                </div>
+                <div className="image-box" id="box5" />
+              </div>
+
+              <div className="carousel-group">
+                <div className="image-box" id="box6" />
+                <div className="image-box" id="box7" />
+                <div className="image-box" id="box8" />
+              </div>
+
+              <div className="carousel-group">
+                <div className="image-box" id="box9" />
+                <div className="video-box-wrapper">
+                  <div className="video-box">
+                    <video
+                      className="slider-video"
+                      autoPlay={true}
+                      muted
+                      loop
+                      playsInline={true}
+                    >
+                      <source
+                        type="video/mp4"
+                        src={require('../../videos/carousel/2.mp4')}
+                      ></source>
+                    </video>
+                  </div>
+                </div>
+                <div className="image-box" id="box10" />
+              </div>
+            </Carousel>
+          </div>
+          <div className="mobile-carousel">
+            <Carousel>
+              <div className="carousel-group">
+                <div className="image-box" id="box1" />
+              </div>
+              <div className="carousel-group">
+                <div className="image-box" id="box2" />
+              </div>
+              <div className="carousel-group">
+                <div className="image-box" id="box3" />
+              </div>
+
+              <div className="carousel-group">
+                <div className="image-box" id="box4" />
+              </div>
+              <div className="carousel-group">
+                <div className="video-box-wrapper">
+                  <div className="video-box">
+                    <video
+                      className="slider-video"
+                      autoPlay={true}
+                      muted
+                      loop
+                      playsInline={true}
+                    >
+                      <source
+                        type="video/mp4"
+                        src={require('../../videos/carousel/1.mp4')}
+                      ></source>
+                    </video>
+                  </div>
                 </div>
               </div>
-              <div className="image-box" id="box5" />
-            </div>
+              <div className="carousel-group">
+                <div className="image-box" id="box5" />
+              </div>
 
-            <div className="carousel-group">
-              <div className="image-box" id="box6" />
-              <div className="image-box" id="box7" />
-              <div className="image-box" id="box8" />
-            </div>
+              <div className="carousel-group">
+                <div className="image-box" id="box6" />
+              </div>
+              <div className="carousel-group">
+                <div className="image-box" id="box7" />
+              </div>
+              <div className="carousel-group">
+                <div className="image-box" id="box8" />
+              </div>
 
-            <div className="carousel-group">
-              <div className="image-box" id="box9" />
-              <div className="video-box-wrapper">
-                <div className="video-box">
-                  <video
-                    className="slider-video"
-                    autoPlay={true}
-                    muted
-                    loop
-                    playsInline={true}
-                  >
-                    <source
-                      type="video/mp4"
-                      src={require('../../videos/carousel/2.mp4')}
-                    ></source>
-                  </video>
+              <div className="carousel-group">
+                <div className="image-box" id="box9" />
+              </div>
+              <div className="carousel-group">
+                <div className="video-box-wrapper">
+                  <div className="video-box">
+                    <video
+                      className="slider-video"
+                      autoPlay={true}
+                      muted
+                      loop
+                      playsInline={true}
+                    >
+                      <source
+                        type="video/mp4"
+                        src={require('../../videos/carousel/2.mp4')}
+                      ></source>
+                    </video>
+                  </div>
                 </div>
               </div>
-              <div className="image-box" id="box10" />
-            </div>
-          </Carousel>
+              <div className="carousel-group">
+                <div className="image-box" id="box10" />
+              </div>
+            </Carousel>
+          </div>
         </div>
         <div className="reviews-container">
           <div className="reviews">

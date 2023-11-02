@@ -90,12 +90,3 @@
 .arrow-cont-right {
   right: 0;
 }
-
-/* Указатели слайдов */
-.circles-cont {
-  @extend %cont-basic;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  height: 15%;
-}

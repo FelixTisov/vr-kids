@@ -280,6 +280,78 @@
     }
   }
 
+  .carousel-main-container {
+    min-width: 320px;
+    width: 100%;
+    max-width: 640px;
+    min-height: 667px;
+    max-height: 667px;
+
+    .desktop-carousel {
+      display: none;
+    }
+
+    .mobile-carousel {
+      @extend %cont-basic;
+      min-width: 320px;
+      width: 100%;
+      max-width: 640px;
+      min-height: 467px;
+      max-height: 467px;
+      align-items: flex-end;
+    }
+
+    .carousel-group {
+      .video-box-wrapper {
+        min-width: 100%;
+        max-width: 100%;
+
+        .video-box {
+          .slider-video {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .image-box {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      #box1 {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      #box2 {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      #box3 {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      #box6 {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      #box7 {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      #box8 {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
   .reviews-container {
     min-width: 100%;
     max-width: 100%;

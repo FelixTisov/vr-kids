@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import './carousel.scss'
+import './carousel_mobile.scss'
 
 function Carousel({ children }) {
   const [currentChildren, setChildren] = useState(children)
@@ -62,6 +63,17 @@ function Carousel({ children }) {
     setOffset((offset) => {
       return offset - 1
     })
+  }
+
+  // Изменения стиля аквтиного индикатора
+  function setDotActive(index) {
+    if (index <= 2 && index >= 0) {
+      let currentDot = document.getElementById(index)
+      let prevDot = document.querySelector('.round-active')
+
+      prevDot.classList.remove('round-active')
+      currentDot.classList.add('round-active')
+    }
   }
 
   return (
