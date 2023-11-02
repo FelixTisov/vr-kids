@@ -25,7 +25,7 @@ const config = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, './public/index.html'),
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),
