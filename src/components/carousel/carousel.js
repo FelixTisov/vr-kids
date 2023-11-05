@@ -16,6 +16,12 @@ function Carousel({ children }) {
     allItemsCont.current.style.transitionProperty = 'transform'
     allItemsCont.current.style.transitionDuration = '800ms'
 
+    if (offset >= 0) {
+      let currentIndex = offset % sliderLength
+      console.log('Index = ' + currentIndex)
+      setDotActive(`round${currentIndex}`)
+    }
+
     // Если индекс меньше длины массива
     if (offset < offsetMax) {
       // Если индекс положительный
@@ -65,14 +71,20 @@ function Carousel({ children }) {
     })
   }
 
-  // Изменения стиля аквтиного индикатора
-  function setDotActive(index) {
-    if (index <= 2 && index >= 0) {
-      let currentDot = document.getElementById(index)
-      let prevDot = document.querySelector('.round-active')
+  // Изменения аквтиного указателя слайда
+  function setDotActive(id) {
+    let currentDot = document.querySelectorAll(`#${id}`)
+    let prevDot = document.querySelectorAll('.round-active')
 
-      prevDot.classList.remove('round-active')
-      currentDot.classList.add('round-active')
+    prevDot?.forEach((item) => item.classList.remove('round-active'))
+    currentDot.forEach((item) => item.classList.add('round-active'))
+  }
+
+  const dotClickHandler = (index) => {
+    if (index != offset) {
+      let currentIndex = offset % sliderLength
+      let newOffset = offset - currentIndex + index
+      setOffset(newOffset)
     }
   }
 
@@ -94,6 +106,24 @@ function Carousel({ children }) {
         {/* Стрелка вправо */}
         <div className="arrow-cont arrow-cont-right">
           <FaChevronRight className="arrow" onClick={handleRight} />
+        </div>
+      </div>
+
+      {/* Указатели слайда */}
+      <div className="circles-cont">
+        <div className="circles">
+          {[...Array(sliderLength)].map((_, index) => {
+            return (
+              <div
+                key={`round${index}`}
+                className="round"
+                id={`round${index}`}
+                onClick={() => {
+                  dotClickHandler(index)
+                }}
+              ></div>
+            )
+          })}
         </div>
       </div>
     </div>

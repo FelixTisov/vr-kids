@@ -173,6 +173,7 @@ function Main() {
           '.pushkin-card',
           '.bank-card',
           '.arrow',
+          '.round',
         ]}
       />
 
