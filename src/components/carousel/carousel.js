@@ -110,8 +110,8 @@ function Carousel({ children }) {
       </div>
 
       {/* Указатели слайда */}
-      <div className="circles-cont">
-        <div className="circles">
+      <div className="dots-cont">
+        <div className="dots">
           {[...Array(sliderLength)].map((_, index) => {
             return (
               <div

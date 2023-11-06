@@ -37,7 +37,7 @@
   animation-name: animate;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  top: 2000px;
+  top: 4400px;
   border-radius: 15px;
 }
 
@@ -135,66 +135,68 @@
   animation-name: animate2;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  top: 4350px;
+  top: 1000px;
   border-radius: 15px;
 }
 
-.start-circles li:nth-child(1) {
+.start-circles-1 li {
+  top: 2000px;
+}
+
+.start-circles-2 li {
+  top: 3000px;
+}
+
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(1) {
   left: 25%;
 }
 
-.start-circles li:nth-child(2) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(2) {
   left: 10%;
 }
 
-.start-circles li:nth-child(3) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(3) {
   left: 70%;
 }
 
-.start-circles li:nth-child(4) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(4) {
   left: 40%;
 }
 
-.start-circles li:nth-child(5) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(5) {
   left: 65%;
 }
 
-.start-circles li:nth-child(6) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(6) {
   left: 75%;
 }
 
-.start-circles li:nth-child(7) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(7) {
   left: 35%;
 }
 
-.start-circles li:nth-child(8) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(8) {
   left: 50%;
 }
 
-.start-circles li:nth-child(9) {
+.start-circles,
+.start-circles-1,
+.start-circles-2 li:nth-child(9) {
   left: 20%;
-}
-
-.start-circles li:nth-child(10) {
-  left: 85%;
-}
-
-.start-circles li:nth-child(11) {
-  left: 65%;
-}
-
-.start-circles li:nth-child(12) {
-  left: 20%;
-}
-
-.start-circles li:nth-child(13) {
-  left: 40%;
-}
-
-.start-circles li:nth-child(14) {
-  left: 90%;
-}
-
-.start-circles li:nth-child(15) {
-  left: 50%;
 }

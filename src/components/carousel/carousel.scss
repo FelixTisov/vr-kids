@@ -86,14 +86,14 @@
   right: 0;
 }
 
-.circles-cont {
+.dots-cont {
   @extend %cont-basic;
   width: 100%;
   height: 60px;
   align-items: flex-end;
 }
 
-.circles {
+.dots {
   @extend %cont-basic;
   min-width: 320px;
   width: 15%;

@@ -16,6 +16,24 @@ function AnimatedBg() {
           <li></li>
           <li></li>
           <li></li>
+        </ul>
+
+        <ul className=" start-circles start-circles-1">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        <ul className=" start-circles start-circles-2">
+          <li></li>
+          <li></li>
+          <li></li>
           <li></li>
           <li></li>
           <li></li>
