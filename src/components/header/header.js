@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import ContactButtonShort from '../contact-button-short/contact-button-short'
 import './header.scss'
 import './header_mobile.scss'
 
@@ -140,6 +141,22 @@ function Header({ handleScrollToBlock, currentVisibleBlock }) {
             >
               КОНТАКТЫ
             </p>
+          </div>
+          <div className="menu-nav_contacts_half">
+            <div className="menu-nav_contacts_half_buttons-container">
+              <ContactButtonShort
+                bgColor="#000"
+                iconUrl="icon_vk_short.svg"
+                alt="vk-icon"
+                link="https://vk.com/vrkids"
+              />
+              <ContactButtonShort
+                bgColor="#67A3E8"
+                iconUrl="icon_tg_short.svg"
+                alt="tg-icon"
+                link="https://t.me/vrkids"
+              />
+            </div>
           </div>
         </div>
       </div>
