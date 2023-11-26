@@ -19,6 +19,8 @@
   min-height: 59px;
   max-height: 59px;
   border-radius: 22px;
+  box-sizing: border-box;
+  padding: 0 27px 0 27px;
   z-index: 5;
   background: rgba(177, 177, 177, 0.65);
   backdrop-filter: blur(7px);
@@ -26,29 +28,28 @@
   .header_buttons-container {
     @extend %cont-basic;
     justify-content: space-between;
-    min-width: 532px;
-    max-width: 532px;
-  }
+    width: 100%;
 
-  .header_button {
-    @extend %cont-basic;
-    min-width: 130px;
-    max-width: 130px;
-    min-height: 39px;
-    max-height: 39px;
+    .header_button {
+      @extend %cont-basic;
+      min-width: 130px;
+      max-width: 130px;
+      min-height: 39px;
+      max-height: 39px;
 
-    p {
-      color: #fff;
-      font-family: ComicCAT;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 400;
-      user-select: none;
+      p {
+        color: #fff;
+        font-family: ComicCAT;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        user-select: none;
+      }
     }
-  }
 
-  .header_button_active {
-    background-color: #828282;
-    border-radius: 14px;
+    .header_button_active {
+      background-color: #828282;
+      border-radius: 14px;
+    }
   }
 }

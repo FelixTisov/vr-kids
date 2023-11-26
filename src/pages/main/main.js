@@ -13,6 +13,7 @@ import './main_mobile.scss'
 
 function Main() {
   const about = useRef()
+  const reviews = useRef()
   const payment = useRef()
   const contacts = useRef()
 
@@ -25,6 +26,9 @@ function Main() {
     switch (targetBlock) {
       case 'about':
         ref = about
+        break
+      case 'reviews':
+        ref = reviews
         break
       case 'payment':
         ref = payment
@@ -57,10 +61,11 @@ function Main() {
   // Вычисление текущего видимого блока
   function CheckCurrentBlock() {
     let about = document.querySelector('.start')
+    let reviews = document.querySelector('.reviews')
     let payment = document.querySelector('.payment')
     let contacts = document.querySelector('.contacts')
 
-    const blocks = [about, payment, contacts]
+    const blocks = [about, reviews, payment, contacts]
     blocks.forEach((block) => {
       if (isElementXPercentInViewport(block, 50)) {
         setCurrentVisibleBlock(block?.className)
@@ -417,7 +422,7 @@ function Main() {
           </div>
         </div>
         <div className="reviews-container">
-          <div className="reviews">
+          <div ref={reviews} className="reviews">
             <div className="review_header">
               <h2>НАШИ ОТЗЫВЫ</h2>
             </div>

@@ -4,6 +4,7 @@ import './header_mobile.scss'
 
 function Header({ handleScrollToBlock, currentVisibleBlock }) {
   const about = useRef()
+  const reviews = useRef()
   const payment = useRef()
   const contacts = useRef()
 
@@ -19,6 +20,10 @@ function Header({ handleScrollToBlock, currentVisibleBlock }) {
     switch (currentVisibleBlock) {
       case 'start':
         button = about.current
+        button.classList.add('header_button_active')
+        break
+      case 'reviews':
+        button = reviews.current
         button.classList.add('header_button_active')
         break
       case 'payment':
@@ -114,6 +119,14 @@ function Header({ handleScrollToBlock, currentVisibleBlock }) {
             <p
               onClick={() => {
                 menuBtnHandler()
+                handleCLick(reviews, 'reviews')
+              }}
+            >
+              ОТЗЫВЫ
+            </p>
+            <p
+              onClick={() => {
+                menuBtnHandler()
                 handleCLick(payment, 'payment')
               }}
             >
@@ -139,6 +152,13 @@ function Header({ handleScrollToBlock, currentVisibleBlock }) {
             className="header_button header_button_active"
           >
             <p>О НАС</p>
+          </div>
+          <div
+            ref={reviews}
+            onClick={() => handleCLick(reviews, 'reviews')}
+            className="header_button"
+          >
+            <p>ОТЗЫВЫ</p>
           </div>
           <div
             ref={payment}

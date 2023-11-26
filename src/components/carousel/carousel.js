@@ -9,6 +9,8 @@ function Carousel({ children }) {
   const allItemsCont = useRef()
   const [sliderLength, setSliderLength] = useState(children.length)
 
+  let mouseOnDrag
+
   useEffect(() => {
     const offsetMax = sliderLength
 
@@ -16,22 +18,17 @@ function Carousel({ children }) {
     allItemsCont.current.style.transitionProperty = 'transform'
     allItemsCont.current.style.transitionDuration = '800ms'
 
+    // Установить текущий активный указатель слайда
     if (offset >= 0) {
       let currentIndex = offset % sliderLength
-      console.log('Index = ' + currentIndex)
       setDotActive(`round${currentIndex}`)
     }
 
-    // Если индекс меньше длины массива
+    // Если сдвиг меньше длиины массива слайдов
     if (offset < offsetMax) {
-      // Если индекс положительный
       if (offset > 0) {
-        // тогда просто сдивагем вправо или влево
         allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
-      }
-      // Если индекс отрицательный
-      else {
-        // если индекс = -1
+      } else {
         if (offset === -1) {
           allItemsCont.current.style.transition = 'none'
           allItemsCont.current.style.transitionProperty = 'none'
@@ -52,26 +49,24 @@ function Carousel({ children }) {
           allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
       }
     } else {
+      // Если сдвиг больше длиины массива слайдов, необходимо увеличить массив слайдов
       setChildren((child) => [...child, children])
       allItemsCont.current.style.transform = `translateX(${-offset * 100}%)`
     }
   }, [offset])
 
-  // Нажатие вправо
-  const handleRight = () => {
+  const handleClickRight = () => {
     setOffset((offset) => {
       return offset + 1
     })
   }
 
-  // Нажатие влево
-  const handleLeft = () => {
+  const handleClickLeft = () => {
     setOffset((offset) => {
       return offset - 1
     })
   }
 
-  // Изменения аквтиного указателя слайда
   function setDotActive(id) {
     let currentDot = document.querySelectorAll(`#${id}`)
     let prevDot = document.querySelectorAll('.round-active')
@@ -88,40 +83,79 @@ function Carousel({ children }) {
     }
   }
 
+  const handleMouseDown = (event) => {
+    let mouseX
+
+    switch (event.type) {
+      case 'mousedown':
+        mouseX = event.clientX
+        mouseOnDrag = mouseX
+        break
+      case 'touchstart':
+        mouseX = event.touches[0].clientX
+        mouseOnDrag = mouseX
+        break
+      default:
+        return
+    }
+  }
+
+  const handleMouseUp = (event) => {
+    let mouseX
+
+    switch (event.type) {
+      case 'mouseup':
+        mouseX = event.clientX
+        break
+      case 'touchend':
+        mouseX = event.changedTouches[0].clientX
+        break
+      default:
+        return
+    }
+    // const mouseX = event.clientX
+    if (Math.abs(mouseX - mouseOnDrag) >= 10)
+      mouseX > mouseOnDrag ? handleClickLeft() : handleClickRight()
+  }
+
   return (
     <div className="main-cont">
-      <div className="carousel">
-        {/* Стрелка влево */}
+      <div
+        className="carousel"
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onTouchEnd={handleMouseUp}
+      >
         <div className="arrow-cont arrow-cont-left">
-          <FaChevronLeft className="arrow" onClick={handleLeft} />
+          <FaChevronLeft className="arrow" onClick={handleClickLeft} />
         </div>
 
-        {/* Все слайды */}
         <div className="window">
           <div ref={allItemsCont} className="all-items-cont">
             {currentChildren}
           </div>
         </div>
 
-        {/* Стрелка вправо */}
         <div className="arrow-cont arrow-cont-right">
-          <FaChevronRight className="arrow" onClick={handleRight} />
+          <FaChevronRight className="arrow" onClick={handleClickRight} />
         </div>
       </div>
 
-      {/* Указатели слайда */}
       <div className="dots-cont">
         <div className="dots">
           {[...Array(sliderLength)].map((_, index) => {
             return (
-              <div
-                key={`round${index}`}
-                className="round"
-                id={`round${index}`}
-                onClick={() => {
-                  dotClickHandler(index)
-                }}
-              ></div>
+              <div className="dot-box">
+                <div
+                  key={`round${index}`}
+                  className="round"
+                  id={`round${index}`}
+                  onClick={() => {
+                    dotClickHandler(index)
+                  }}
+                ></div>
+              </div>
             )
           })}
         </div>
